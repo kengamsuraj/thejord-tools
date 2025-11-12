@@ -24,11 +24,6 @@ export default function MonacoJsonEditor({
       value={value}
       onChange={handleEditorChange}
       theme="vs-dark"
-      loading={
-        <div className="flex items-center justify-center h-full bg-bg-dark">
-          <div className="text-text-secondary">Loading editor...</div>
-        </div>
-      }
       options={{
         readOnly,
         minimap: { enabled: false },
