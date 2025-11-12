@@ -1,6 +1,7 @@
 node_modules
 npm-debug.log
-dist
+# dist folder is needed for Docker build
+# dist
 .git
 .gitignore
 .env
