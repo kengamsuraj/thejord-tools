@@ -12,7 +12,7 @@ env:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted  # Uses self-hosted runner on local network
     permissions:
       contents: read
       packages: write
@@ -57,18 +57,24 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
-      - name: Deploy to K3s via SSH
-        uses: appleboy/ssh-action@v1.0.0
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.SSH_PORT || 22 }}
-          script: |
-            # Login to GitHub Container Registry on K3s node
-            echo "${{ secrets.GITHUB_TOKEN }}" | sudo k3s ctr images pull --user ${{ github.actor }} ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+      - name: Deploy to K3s (direct access via self-hosted runner)
+        run: |
+          # Runner has direct access to K3s on local network
 
-            # Update deployment YAML with new image
+          # Create imagePullSecret on K3s
+          ssh -o StrictHostKeyChecking=no root@192.168.1.212 <<'ENDSSH'
+            # Create namespace if doesn't exist
+            kubectl create namespace thejord --dry-run=client -o yaml | kubectl apply -f -
+
+            # Create/update imagePullSecret for GHCR
+            kubectl create secret docker-registry ghcr-secret \
+              --docker-server=${{ env.REGISTRY }} \
+              --docker-username=${{ github.actor }} \
+              --docker-password=${{ secrets.GITHUB_TOKEN }} \
+              --namespace=thejord \
+              --dry-run=client -o yaml | kubectl apply -f -
+
+            # Apply deployment with new image
             cat <<EOF | kubectl apply -f -
             ---
             apiVersion: v1
@@ -176,14 +182,6 @@ jobs:
                 secretName: thejord-tls
             EOF
 
-            # Create imagePullSecret if doesn't exist
-            kubectl create secret docker-registry ghcr-secret \
-              --docker-server=${{ env.REGISTRY }} \
-              --docker-username=${{ github.actor }} \
-              --docker-password=${{ secrets.GITHUB_TOKEN }} \
-              --namespace=thejord \
-              --dry-run=client -o yaml | kubectl apply -f -
-
             # Wait for rollout
             kubectl rollout status deployment/thejord -n thejord --timeout=5m
 
@@ -191,6 +189,7 @@ jobs:
             kubectl get pods -n thejord
             kubectl get svc -n thejord
             kubectl get ingress -n thejord
+          ENDSSH
 
       - name: Deployment summary
         run: |
