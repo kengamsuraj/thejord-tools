@@ -190,7 +190,7 @@ jobs:
               - hosts:
                 - thejord.it
                 secretName: thejord-tls
-            EOF
+EOF
 
             # Wait for rollout
             kubectl rollout status deployment/thejord -n thejord --timeout=5m
@@ -199,7 +199,7 @@ jobs:
             kubectl get pods -n thejord
             kubectl get svc -n thejord
             kubectl get ingress -n thejord
-          ENDSSH
+ENDSSH
 
       - name: Deployment summary
         run: |
