@@ -192,13 +192,37 @@ docker-compose up -d
 
 ## ☸️ Kubernetes (K3s) Deployment
 
-### Prerequisites
+### 🚀 Automated CI/CD (Recommended)
 
+The project includes **GitHub Actions pipeline** for automated build and deploy:
+
+```mermaid
+graph LR
+    A[Push to main] --> B[Build Project]
+    B --> C[Build Docker Image]
+    C --> D[Push to GHCR]
+    D --> E[Deploy to K3s]
+    E --> F[✅ Live on thejord.it]
+```
+
+**Setup:** See [.github/CICD-SETUP.md](./.github/CICD-SETUP.md)
+
+**Features:**
+- ✅ Automatic deploy on every push to `main`
+- ✅ Docker images on GitHub Container Registry
+- ✅ Rolling updates with zero downtime
+- ✅ Automatic rollback on failure
+
+---
+
+### 📋 Manual Deployment
+
+**Prerequisites:**
 - K3s cluster running
 - kubectl configured
-- Cloudflare Tunnel (optional, for ingress)
+- SSH access to K3s node
 
-### Deploy
+**Deploy:**
 
 ```bash
 # Apply Kubernetes configuration
@@ -207,9 +231,12 @@ kubectl apply -f k8s-deployment.yaml
 # Verify deployment
 kubectl get pods -n thejord
 kubectl get svc -n thejord
+kubectl get ingress -n thejord
 ```
 
-The application will be exposed via NodePort **30700** and accessible through Cloudflare Tunnel.
+The application will be exposed via:
+- **NodePort**: 30700
+- **Ingress**: https://thejord.it (via Traefik + Let's Encrypt)
 
 For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md).
 
