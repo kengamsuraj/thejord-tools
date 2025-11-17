@@ -35,8 +35,9 @@ const FIELD_RANGES = {
   dayOfWeek: { min: 0, max: 7, name: 'Day of Week' } // 0 and 7 both represent Sunday
 }
 
-const MONTH_NAMES = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
-const DAY_NAMES = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
+// Reserved for future use: month/day name support
+// const MONTH_NAMES = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
+// const DAY_NAMES = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
 
 export function parseCronExpression(expression: string): CronExpression {
   const parts = expression.trim().split(/\s+/)
@@ -306,15 +307,15 @@ function matchesCronExpression(date: Date, cron: CronExpression): boolean {
   const dayOfWeek = date.getDay() // 0 = Sunday
 
   return (
-    matchesField(minute, cron.minute, 0, 59) &&
-    matchesField(hour, cron.hour, 0, 23) &&
-    matchesField(dayOfMonth, cron.dayOfMonth, 1, 31) &&
-    matchesField(month, cron.month, 1, 12) &&
-    (matchesField(dayOfWeek, cron.dayOfWeek, 0, 7) || (dayOfWeek === 0 && cron.dayOfWeek === '7'))
+    matchesField(minute, cron.minute) &&
+    matchesField(hour, cron.hour) &&
+    matchesField(dayOfMonth, cron.dayOfMonth) &&
+    matchesField(month, cron.month) &&
+    (matchesField(dayOfWeek, cron.dayOfWeek) || (dayOfWeek === 0 && cron.dayOfWeek === '7'))
   )
 }
 
-function matchesField(value: number, pattern: string, min: number, max: number): boolean {
+function matchesField(value: number, pattern: string): boolean {
   // Wildcard
   if (pattern === '*') return true
 
