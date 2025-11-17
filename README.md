@@ -18,6 +18,7 @@
 <p align="center">
   <a href="https://thejord.it"><strong>🌐 Live Demo</strong></a> •
   <a href="./docs/"><strong>📖 Documentation</strong></a> •
+  <a href="./docs/TESTING.md"><strong>🧪 Testing Guide</strong></a> •
   <a href="https://github.com/thejord-it/thejord-tools/issues"><strong>🐛 Report Bug</strong></a> •
   <a href="https://github.com/thejord-it/thejord-tools/issues"><strong>✨ Request Feature</strong></a>
 </p>
@@ -167,6 +168,42 @@ npm run preview
 
 # 📁 Output: dist/ folder (131KB gzipped)
 ```
+
+### 🧪 Testing
+
+**Unit Tests (Vitest):**
+```bash
+# Run all unit tests
+npm run test:run
+
+# Run tests in watch mode
+npm test
+
+# Run tests with coverage
+npm run test:coverage
+```
+
+**E2E Tests (Playwright):**
+```bash
+# Run all E2E tests
+npx playwright test
+
+# Run specific test file
+npx playwright test e2e/base64-file-detection.spec.ts
+
+# Run tests in headed mode (see browser)
+npx playwright test --headed
+
+# View test report
+npx playwright show-report
+```
+
+**Test Coverage:**
+- ✅ **61 Unit Tests** - Base64 Tool comprehensive coverage
+- ✅ **21 E2E Tests** - JSON Formatter + Base64 file detection
+- ✅ **All file formats tested** - PNG, JPEG, GIF, BMP, WebP, PDF, ZIP, MP3, MP4, RAR, GZIP, 7-Zip
+
+For detailed testing documentation, see **[docs/TESTING.md](./docs/TESTING.md)**
 
 ---
 
@@ -357,11 +394,12 @@ For security policy and vulnerability reporting, see [SECURITY.md](./SECURITY.md
 - ✅ Security hardening
 - ✅ Open source release
 
-### Phase 2: Testing & CI/CD (Weeks 1-2)
-- [ ] Unit tests with Vitest (80%+ coverage)
-- [ ] Integration tests
-- [x] GitHub Actions CI/CD
-- [x] Automated deployment
+### Phase 2: Testing & CI/CD (Completed ✅)
+- ✅ Unit tests with Vitest (61 tests for Base64 Tool)
+- ✅ E2E tests with Playwright (21 tests total)
+- ✅ Comprehensive file format testing (12+ formats)
+- ✅ GitHub Actions CI/CD
+- ✅ Automated deployment
 
 ### Phase 3: Next.js Migration (Weeks 3-4)
 - [ ] Migrate to Next.js 14 App Router

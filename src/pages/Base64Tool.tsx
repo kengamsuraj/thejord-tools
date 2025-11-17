@@ -52,6 +52,11 @@ export default function Base64Tool() {
         fileType.mime.startsWith('audio/') ||
         fileType.mime.includes('pdf') ||
         fileType.mime.includes('zip') ||
+        fileType.mime.includes('rar') ||
+        fileType.mime.includes('7z') ||
+        fileType.mime.includes('gzip') ||
+        fileType.mime.includes('bzip') ||
+        fileType.mime.includes('compressed') ||
         fileType.mime.includes('executable') ||
         fileType.mime.includes('octet-stream')
       );
