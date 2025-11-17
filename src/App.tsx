@@ -11,6 +11,8 @@ import MarkdownConverter from './pages/MarkdownConverter'
 import ColorConverter from './pages/ColorConverter'
 import LoremIpsumGenerator from './pages/LoremIpsumGenerator'
 import DiffChecker from './pages/DiffChecker'
+import CronBuilder from './pages/CronBuilder'
+import JsonSchemaConverter from './pages/JsonSchemaConverter'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Blog from './pages/Blog'
@@ -108,6 +110,18 @@ function Home() {
             <h3 className="text-xl font-bold mb-2 text-text-primary">Text Diff Checker</h3>
             <p className="text-text-secondary">Compare two texts and highlight differences</p>
           </Link>
+
+          <Link to="/cron-builder" className="bg-bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20 cursor-pointer">
+            <div className="text-3xl mb-4">🕐</div>
+            <h3 className="text-xl font-bold mb-2 text-text-primary">Cron Expression Builder</h3>
+            <p className="text-text-secondary">Build and validate cron schedules visually</p>
+          </Link>
+
+          <Link to="/json-schema" className="bg-bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20 cursor-pointer">
+            <div className="text-3xl mb-4">📋</div>
+            <h3 className="text-xl font-bold mb-2 text-text-primary">JSON Schema Converter</h3>
+            <p className="text-text-secondary">Convert JSON to JSON Schema automatically</p>
+          </Link>
         </div>
       </main>
     </div>
@@ -149,6 +163,8 @@ function App() {
         <Route path="/color" element={<ColorConverter />} />
         <Route path="/lorem" element={<LoremIpsumGenerator />} />
         <Route path="/diff" element={<DiffChecker />} />
+        <Route path="/cron-builder" element={<CronBuilder />} />
+        <Route path="/json-schema" element={<JsonSchemaConverter />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
