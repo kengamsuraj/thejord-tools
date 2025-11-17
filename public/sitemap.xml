@@ -148,4 +148,36 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Cron Expression Builder (NEW v1.2.0) -->
+  <url>
+    <loc>https://thejord.it/cron-builder</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- JSON Schema Converter (NEW v1.2.0) -->
+  <url>
+    <loc>https://thejord.it/json-schema</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog Post: Cron Expression Builder (NEW v1.2.0) -->
+  <url>
+    <loc>https://thejord.it/blog/cron-expression-builder</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Post: JSON Schema Converter (NEW v1.2.0) -->
+  <url>
+    <loc>https://thejord.it/blog/json-schema-converter</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

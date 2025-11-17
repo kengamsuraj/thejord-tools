@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import {
   parseCronExpression,
   buildCronExpression,
@@ -93,6 +94,54 @@ export default function CronBuilder() {
 
   return (
     <div className="min-h-screen bg-bg-darkest">
+      <Helmet>
+        <title>Cron Expression Builder - Visual Cron Schedule Creator | THEJORD.IT</title>
+        <meta name="description" content="Create and validate cron expressions with our visual builder. Pattern library, real-time validation, next 5 executions preview. Perfect for Linux crontab, GitHub Actions, Jenkins, Kubernetes CronJobs." />
+        <meta name="keywords" content="cron expression builder, cron generator, crontab generator, cron schedule, visual cron builder, cron validator, github actions cron, kubernetes cronjob, jenkins cron, linux crontab" />
+        <link rel="canonical" href="https://thejord.it/cron-builder" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Cron Expression Builder - Visual Cron Schedule Creator" />
+        <meta property="og:description" content="Create and validate cron expressions with our visual builder. Pattern library, real-time validation, next 5 executions preview." />
+        <meta property="og:url" content="https://thejord.it/cron-builder" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://thejord.it/og-cron-builder.png" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Cron Expression Builder - Visual Cron Schedule Creator" />
+        <meta name="twitter:description" content="Create and validate cron expressions with visual builder, pattern library, and execution preview." />
+        <meta name="twitter:image" content="https://thejord.it/og-cron-builder.png" />
+
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Cron Expression Builder",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Any",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "description": "Visual cron expression builder with pattern library, real-time validation, and execution preview. Create cron schedules for Linux crontab, GitHub Actions, Jenkins, and Kubernetes.",
+            "url": "https://thejord.it/cron-builder",
+            "screenshot": "https://thejord.it/screenshot-cron-builder.png",
+            "featureList": [
+              "Visual builder with 5 cron fields",
+              "12 pre-configured pattern library",
+              "Real-time expression validation",
+              "Human-readable descriptions",
+              "Next 5 executions preview",
+              "Copy to clipboard",
+              "Direct text input mode"
+            ]
+          })}
+        </script>
+      </Helmet>
+
       <header className="bg-bg-dark border-b border-border">
         <nav className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center">

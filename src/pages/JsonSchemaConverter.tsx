@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import MonacoJsonEditor from '../components/MonacoJsonEditor'
 import { jsonToJsonSchema, validateJSON, type JsonSchemaOptions } from '../lib/schema-generator'
 
@@ -93,6 +94,54 @@ export default function JsonSchemaConverter() {
 
   return (
     <div className="min-h-screen bg-bg-darkest">
+      <Helmet>
+        <title>JSON to JSON Schema Converter - Generate JSON Schema | THEJORD.IT</title>
+        <meta name="description" content="Convert JSON to JSON Schema automatically. Supports Draft 2020-12 and Draft 07. Auto-detects types, formats (email, URI, UUID), nested objects. Perfect for OpenAPI, API validation, Ajv." />
+        <meta name="keywords" content="json schema generator, json to json schema, json schema converter, openapi schema, api validation, ajv validation, json schema draft 2020-12, swagger schema, api documentation" />
+        <link rel="canonical" href="https://thejord.it/json-schema" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="JSON to JSON Schema Converter - Auto Generate Schemas" />
+        <meta property="og:description" content="Convert JSON to JSON Schema automatically. Format detection, nested objects, Draft 2020-12/07 support. Perfect for OpenAPI and API validation." />
+        <meta property="og:url" content="https://thejord.it/json-schema" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://thejord.it/og-json-schema.png" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="JSON to JSON Schema Converter" />
+        <meta name="twitter:description" content="Generate JSON Schema from JSON data. Auto-detect types and formats. OpenAPI ready." />
+        <meta name="twitter:image" content="https://thejord.it/og-json-schema.png" />
+
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "JSON Schema Converter",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Any",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "description": "Convert JSON to JSON Schema with automatic type and format detection. Supports Draft 2020-12 and Draft 07. Perfect for OpenAPI specifications, API validation with Ajv, and API documentation.",
+            "url": "https://thejord.it/json-schema",
+            "screenshot": "https://thejord.it/screenshot-json-schema.png",
+            "featureList": [
+              "JSON to JSON Schema conversion",
+              "Auto type detection (string, number, integer, boolean, array, object)",
+              "Format detection (email, URI, UUID, date-time, IPv4)",
+              "Draft 2020-12 and Draft 07 support",
+              "Nested objects and arrays",
+              "Configurable required fields",
+              "Copy and download schema"
+            ]
+          })}
+        </script>
+      </Helmet>
+
       <header className="bg-bg-dark border-b border-border">
         <nav className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
