@@ -1,24 +1,39 @@
-import { useEffect } from 'react'
+import { useEffect, lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom'
 import CookieConsent from 'react-cookie-consent'
 import { initGA, trackPageView } from './lib/analytics'
-import JsonFormatter from './pages/JsonFormatter'
-import Base64Tool from './pages/Base64Tool'
-import RegexTester from './pages/RegexTester'
-import HashGenerator from './pages/HashGenerator'
-import UrlTool from './pages/UrlTool'
-import MarkdownConverter from './pages/MarkdownConverter'
-import ColorConverter from './pages/ColorConverter'
-import LoremIpsumGenerator from './pages/LoremIpsumGenerator'
-import DiffChecker from './pages/DiffChecker'
-import CronBuilder from './pages/CronBuilder'
-import JsonSchemaConverter from './pages/JsonSchemaConverter'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import Blog from './pages/Blog'
-import BlogPost from './pages/BlogPost'
-import Changelog from './pages/Changelog'
-import Privacy from './pages/Privacy'
+import { RoutePreloader } from './components/RoutePreloader'
+
+// Lazy load all page components for code splitting
+const JsonFormatter = lazy(() => import('./pages/JsonFormatter'))
+const Base64Tool = lazy(() => import('./pages/Base64Tool'))
+const RegexTester = lazy(() => import('./pages/RegexTester'))
+const HashGenerator = lazy(() => import('./pages/HashGenerator'))
+const UrlTool = lazy(() => import('./pages/UrlTool'))
+const MarkdownConverter = lazy(() => import('./pages/MarkdownConverter'))
+const ColorConverter = lazy(() => import('./pages/ColorConverter'))
+const LoremIpsumGenerator = lazy(() => import('./pages/LoremIpsumGenerator'))
+const DiffChecker = lazy(() => import('./pages/DiffChecker'))
+const CronBuilder = lazy(() => import('./pages/CronBuilder'))
+const JsonSchemaConverter = lazy(() => import('./pages/JsonSchemaConverter'))
+const About = lazy(() => import('./pages/About'))
+const Contact = lazy(() => import('./pages/Contact'))
+const Blog = lazy(() => import('./pages/Blog'))
+const BlogPost = lazy(() => import('./pages/BlogPost'))
+const Changelog = lazy(() => import('./pages/Changelog'))
+const Privacy = lazy(() => import('./pages/Privacy'))
+
+// Loading fallback component
+function PageLoader() {
+  return (
+    <div className="min-h-screen bg-bg-darkest flex items-center justify-center">
+      <div className="text-center">
+        <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+        <p className="text-text-secondary">Loading...</p>
+      </div>
+    </div>
+  )
+}
 
 function Home() {
   return (
@@ -152,26 +167,29 @@ function App() {
   return (
     <BrowserRouter>
       <AnalyticsTracker />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/json-formatter" element={<JsonFormatter />} />
-        <Route path="/base64" element={<Base64Tool />} />
-        <Route path="/regex-tester" element={<RegexTester />} />
-        <Route path="/hash-generator" element={<HashGenerator />} />
-        <Route path="/url-tool" element={<UrlTool />} />
-        <Route path="/markdown" element={<MarkdownConverter />} />
-        <Route path="/color" element={<ColorConverter />} />
-        <Route path="/lorem" element={<LoremIpsumGenerator />} />
-        <Route path="/diff" element={<DiffChecker />} />
-        <Route path="/cron-builder" element={<CronBuilder />} />
-        <Route path="/json-schema" element={<JsonSchemaConverter />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:slug" element={<BlogPost />} />
-        <Route path="/changelog" element={<Changelog />} />
-        <Route path="/privacy" element={<Privacy />} />
-      </Routes>
+      <RoutePreloader />
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/json-formatter" element={<JsonFormatter />} />
+          <Route path="/base64" element={<Base64Tool />} />
+          <Route path="/regex-tester" element={<RegexTester />} />
+          <Route path="/hash-generator" element={<HashGenerator />} />
+          <Route path="/url-tool" element={<UrlTool />} />
+          <Route path="/markdown" element={<MarkdownConverter />} />
+          <Route path="/color" element={<ColorConverter />} />
+          <Route path="/lorem" element={<LoremIpsumGenerator />} />
+          <Route path="/diff" element={<DiffChecker />} />
+          <Route path="/cron-builder" element={<CronBuilder />} />
+          <Route path="/json-schema" element={<JsonSchemaConverter />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/changelog" element={<Changelog />} />
+          <Route path="/privacy" element={<Privacy />} />
+        </Routes>
+      </Suspense>
 
       {/* Cookie Consent Banner */}
       <CookieConsent
