@@ -1,42 +1,78 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
   <defs>
-    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+    <!-- Gradient per effetto metallico T -->
+    <linearGradient id="metalT" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5B8A9F;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3D5A6B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2A3F4D;stop-opacity:1" />
     </linearGradient>
 
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+    <!-- Gradient per effetto metallico J -->
+    <linearGradient id="metalJ" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#B8C5CC;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8B9CA6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6B7D87;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Gradient per highlight -->
+    <linearGradient id="highlightT" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </linearGradient>
+
+    <linearGradient id="highlightJ" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </linearGradient>
+
+    <!-- Shadow -->
+    <filter id="shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="4" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
       <feMerge>
-        <feMergeNode in="coloredBlur"/>
+        <feMergeNode/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+
+    <!-- Bevel effect -->
+    <filter id="bevel">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+      <feSpecularLighting in="blur" surfaceScale="3" specularConstant="0.8" specularExponent="20" lighting-color="#ffffff" result="specOut">
+        <fePointLight x="-100" y="-100" z="200"/>
+      </feSpecularLighting>
+      <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
+      <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+    </filter>
   </defs>
 
-  <!-- Background circle with gradient border -->
-  <circle cx="100" cy="100" r="95" fill="#0A0F1A" stroke="url(#logoGrad)" stroke-width="3"/>
-
-  <!-- Letter T -->
-  <g filter="url(#glow)">
-    <path d="M 50 65 L 95 65 M 72.5 65 L 72.5 135"
-          stroke="url(#logoGrad)"
-          stroke-width="12"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          fill="none"/>
+  <!-- Lettera T (scura, dietro) -->
+  <g filter="url(#shadow)">
+    <!-- Barra orizzontale T -->
+    <path d="M 40 50 L 130 50 L 130 70 L 100 70 L 100 150 L 70 150 L 70 70 L 40 70 Z"
+          fill="url(#metalT)"
+          filter="url(#bevel)"/>
+    <!-- Highlight sulla T -->
+    <path d="M 40 50 L 130 50 L 130 60 L 100 60 L 100 150 L 95 150 L 95 60 L 40 60 Z"
+          fill="url(#highlightT)"
+          opacity="0.3"/>
   </g>
 
-  <!-- Letter J -->
-  <g filter="url(#glow)">
-    <path d="M 105 65 L 105 115 Q 105 135 130 135 Q 150 135 150 115"
-          stroke="url(#logoGrad)"
-          stroke-width="12"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          fill="none"/>
-
-    <!-- Dot on J -->
-    <circle cx="105" cy="50" r="7" fill="url(#logoGrad)"/>
+  <!-- Lettera J (chiara, davanti) -->
+  <g filter="url(#shadow)">
+    <!-- Corpo principale J -->
+    <path d="M 105 80 L 135 80 L 135 130 Q 135 160 105 160 Q 75 160 75 140 L 90 140 Q 90 145 105 145 Q 120 145 120 130 L 120 95 L 105 95 Z"
+          fill="url(#metalJ)"
+          filter="url(#bevel)"/>
+    <!-- Highlight sulla J -->
+    <path d="M 105 80 L 135 80 L 135 130 Q 135 155 110 158"
+          fill="url(#highlightJ)"
+          opacity="0.4"/>
+    <!-- Dot sulla J -->
+    <circle cx="120" cy="65" r="8" fill="url(#metalJ)" filter="url(#bevel)"/>
+    <circle cx="120" cy="65" r="8" fill="url(#highlightJ)" opacity="0.3"/>
   </g>
 </svg>
