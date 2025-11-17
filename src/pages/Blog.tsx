@@ -3,6 +3,28 @@ import { Link } from 'react-router-dom'
 // Blog posts data (temporary - will move to database/CMS later)
 const blogPosts = [
   {
+    id: 'cron-expression-builder',
+    slug: 'cron-expression-builder',
+    title: 'Cron Expression Builder: Pianifica Task Automatici con Facilità',
+    excerpt: 'Scopri il nostro nuovo Cron Expression Builder: crea e valida espressioni cron con un\'interfaccia visuale intuitiva. Pattern predefiniti, validazione real-time e anteprima delle prossime esecuzioni.',
+    author: 'THEJORD Team',
+    date: '2025-11-17',
+    readTime: '10 min',
+    tags: ['Tools', 'Cron', 'Automation'],
+    image: '🕐'
+  },
+  {
+    id: 'json-schema-converter',
+    slug: 'json-schema-converter',
+    title: 'JSON Schema Converter: Genera Schemi di Validazione Automaticamente',
+    excerpt: 'Converti JSON in JSON Schema con un click. Rileva automaticamente tipi e formati, genera schemi Draft 2020-12 o Draft 07, e documenta le tue API in modo professionale.',
+    author: 'THEJORD Team',
+    date: '2025-11-17',
+    readTime: '12 min',
+    tags: ['Tools', 'JSON', 'API'],
+    image: '📋'
+  },
+  {
     id: 'come-validare-json-online',
     slug: 'come-validare-json-online',
     title: 'Come Validare JSON Online Gratis: Guida Completa 2025',

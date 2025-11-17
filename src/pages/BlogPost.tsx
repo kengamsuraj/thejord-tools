@@ -9,6 +9,223 @@ const blogPosts: Record<string, {
   tags: string[]
   content: JSX.Element
 }> = {
+  'cron-expression-builder': {
+    title: 'Cron Expression Builder: Pianifica Task Automatici con Facilità',
+    author: 'THEJORD Team',
+    date: '2025-11-17',
+    readTime: '10 min',
+    tags: ['Tools', 'Cron', 'Automation'],
+    content: (
+      <div className="prose prose-invert max-w-none">
+        <p className="text-xl text-text-secondary leading-relaxed mb-8">
+          Oggi siamo entusiasti di presentare il nostro ultimo tool: <strong className="text-primary-light">Cron Expression Builder</strong> 🕐
+        </p>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          Se hai mai dovuto configurare task schedulati su Linux, macOS o sistemi CI/CD, sicuramente conosci le espressioni cron.
+          Potenti ma criptiche, queste stringhe di 5 campi controllano quando e come vengono eseguiti i tuoi script automatici.
+        </p>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">🎯 Il Problema con le Espressioni Cron</h2>
+        <div className="bg-bg-dark border border-border rounded-lg p-4 mb-6">
+          <code className="text-primary-light">*/15 9-17 * * 1-5</code>
+        </div>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          Cosa significa questa espressione? A memoria, potresti non saperlo. Le espressioni cron sono notoriamente difficili da
+          leggere e scrivere correttamente al primo tentativo.
+        </p>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">✨ La Soluzione: Visual Builder</h2>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          Il nostro <strong className="text-primary-light">Cron Expression Builder</strong> risolve questo problema con tre modalità di lavoro:
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+          <div className="bg-bg-dark border border-border rounded-lg p-6">
+            <h3 className="text-xl font-bold text-primary-light mb-3">🎨 Visual Builder</h3>
+            <p className="text-text-secondary text-sm">
+              Costruisci campo per campo con interfaccia intuitiva. Supporta *, range, liste e step.
+            </p>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-6">
+            <h3 className="text-xl font-bold text-primary-light mb-3">⌨️ Direct Input</h3>
+            <p className="text-text-secondary text-sm">
+              Scrivi direttamente con validazione real-time. Errori immediati con indicazione del problema.
+            </p>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-6">
+            <h3 className="text-xl font-bold text-primary-light mb-3">📚 Pattern Library</h3>
+            <p className="text-text-secondary text-sm">
+              12 pattern comuni pronti all'uso. Un click per applicare e modificare.
+            </p>
+          </div>
+        </div>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">🚀 Feature Avanzate</h2>
+        <ul className="list-disc list-inside space-y-2 text-text-secondary mb-8">
+          <li><strong className="text-primary-light">Validazione Real-Time</strong> - Range e sintassi verificati istantaneamente</li>
+          <li><strong className="text-primary-light">Anteprima Esecuzioni</strong> - Vedi le prossime 5 esecuzioni</li>
+          <li><strong className="text-primary-light">Descrizione Human-Readable</strong> - Traduzione in linguaggio naturale</li>
+          <li><strong className="text-primary-light">Copy & Paste</strong> - Un click per copiare negli appunti</li>
+        </ul>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">📋 Casi d'Uso Reali</h2>
+        <div className="space-y-4 mb-8">
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h3 className="font-bold text-primary-light mb-2">Database Backup Notturno</h3>
+            <code className="text-sm text-text-secondary">0 2 * * *</code>
+            <p className="text-sm text-text-muted mt-2">Ogni giorno alle 2:00 AM - backup quando il traffico è minimo</p>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h3 className="font-bold text-primary-light mb-2">Report Settimanale</h3>
+            <code className="text-sm text-text-secondary">0 9 * * 1</code>
+            <p className="text-sm text-text-muted mt-2">Ogni lunedì alle 9:00 AM - generazione report per il team</p>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-4">
+            <h3 className="font-bold text-primary-light mb-2">Health Check Frequente</h3>
+            <code className="text-sm text-text-secondary">*/5 * * * *</code>
+            <p className="text-sm text-text-muted mt-2">Ogni 5 minuti - verifica stato dei servizi</p>
+          </div>
+        </div>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">🛠️ Integrazione con Strumenti Popolari</h2>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          Compatibile con: Linux/macOS Crontab, GitHub Actions, GitLab CI/CD, Jenkins, Kubernetes CronJob.
+        </p>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">🔒 Privacy e Sicurezza</h2>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          Come tutti i tool di THEJORD.IT, il Cron Expression Builder funziona <strong className="text-primary-light">100% lato client</strong>:
+        </p>
+        <ul className="list-disc list-inside space-y-2 text-text-secondary mb-8">
+          <li>Nessun dato inviato ai server</li>
+          <li>Zero tracking delle tue espressioni</li>
+          <li>Funziona offline dopo il caricamento</li>
+          <li>Open source e verificabile</li>
+        </ul>
+
+        <div className="bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 rounded-xl p-8 text-center mt-12">
+          <h2 className="text-2xl font-bold mb-4 text-text-primary">🚀 Prova Subito</h2>
+          <p className="text-text-secondary mb-6">
+            Non lasciare che le espressioni cron ti rallentino. Provalo oggi e semplifica la gestione dei tuoi task automatici!
+          </p>
+          <a
+            href="/cron-builder"
+            className="inline-block bg-primary hover:bg-primary-light text-bg-darkest px-8 py-3 rounded-lg font-semibold transition-colors"
+          >
+            Apri Cron Builder →
+          </a>
+        </div>
+      </div>
+    )
+  },
+  'json-schema-converter': {
+    title: 'JSON Schema Converter: Genera Schemi di Validazione Automaticamente',
+    author: 'THEJORD Team',
+    date: '2025-11-17',
+    readTime: '12 min',
+    tags: ['Tools', 'JSON', 'API'],
+    content: (
+      <div className="prose prose-invert max-w-none">
+        <p className="text-xl text-text-secondary leading-relaxed mb-8">
+          La documentazione e validazione delle API è fondamentale, ma creare JSON Schema manualmente è tedioso e soggetto a errori.
+          Oggi presentiamo il nostro <strong className="text-primary-light">JSON Schema Converter</strong> 📋
+        </p>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">🎯 Cos'è JSON Schema?</h2>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          JSON Schema è lo standard de facto per descrivere e validare strutture JSON. È usato in:
+        </p>
+        <ul className="list-disc list-inside space-y-2 text-text-secondary mb-8">
+          <li><strong className="text-primary-light">OpenAPI/Swagger</strong> - Documentazione API REST</li>
+          <li><strong className="text-primary-light">API Gateway</strong> - Validazione richieste/risposte</li>
+          <li><strong className="text-primary-light">Form Generation</strong> - Generazione automatica di UI</li>
+          <li><strong className="text-primary-light">Data Validation</strong> - Librerie come Ajv</li>
+          <li><strong className="text-primary-light">IDE Autocomplete</strong> - IntelliSense e code completion</li>
+        </ul>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">✨ Funzionalità Chiave</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          <div className="bg-bg-dark border border-border rounded-lg p-6">
+            <h3 className="text-xl font-bold text-primary-light mb-3">🔍 Auto Type Detection</h3>
+            <p className="text-text-secondary text-sm">
+              Rileva automaticamente: string, number, integer, boolean, array, object, null
+            </p>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-6">
+            <h3 className="text-xl font-bold text-primary-light mb-3">📧 Format Detection</h3>
+            <p className="text-text-secondary text-sm">
+              Identifica email, URI, UUID, date-time, IPv4, IPv6 e altri formati
+            </p>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-6">
+            <h3 className="text-xl font-bold text-primary-light mb-3">🔄 Schema Versions</h3>
+            <p className="text-text-secondary text-sm">
+              Supporta Draft 2020-12 (latest) e Draft 07 per retrocompatibilità
+            </p>
+          </div>
+          <div className="bg-bg-dark border border-border rounded-lg p-6">
+            <h3 className="text-xl font-bold text-primary-light mb-3">🌳 Nested Objects</h3>
+            <p className="text-text-secondary text-sm">
+              Gestisce oggetti e array annidati con rilevamento ricorsivo
+            </p>
+          </div>
+        </div>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">💼 Casi d'Uso Pratici</h2>
+
+        <h3 className="text-2xl font-bold mt-8 mb-3 text-text-primary">1. API Documentation (OpenAPI)</h3>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          Genera automaticamente gli schemi per le tue spec OpenAPI/Swagger. Parti da esempi di response e ottieni schemi pronti da integrare.
+        </p>
+
+        <h3 className="text-2xl font-bold mt-8 mb-3 text-text-primary">2. API Validation (Ajv)</h3>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          Usa gli schemi generati con librerie come Ajv per validare richieste e risposte API in runtime.
+        </p>
+
+        <h3 className="text-2xl font-bold mt-8 mb-3 text-text-primary">3. TypeScript Type Generation</h3>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          Usa tool come json-schema-to-typescript per generare interfacce TypeScript type-safe dai tuoi schemi.
+        </p>
+
+        <h3 className="text-2xl font-bold mt-8 mb-3 text-text-primary">4. Form Generation</h3>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          Librerie come react-jsonschema-form generano form UI automaticamente dai JSON Schema.
+        </p>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">⚙️ Opzioni di Configurazione</h2>
+        <ul className="list-disc list-inside space-y-2 text-text-secondary mb-8">
+          <li><strong className="text-primary-light">Schema Title</strong> - Aggiungi un titolo descrittivo</li>
+          <li><strong className="text-primary-light">Make Required</strong> - Marca tutti i campi come required</li>
+          <li><strong className="text-primary-light">Add Format Hints</strong> - Include rilevamento formati (email, URI, etc.)</li>
+          <li><strong className="text-primary-light">Schema Version</strong> - Scegli tra Draft 2020-12 o Draft 07</li>
+        </ul>
+
+        <h2 className="text-3xl font-bold mt-12 mb-4 text-text-primary">🔒 Privacy Garantita</h2>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          Il tool funziona <strong className="text-primary-light">100% client-side</strong>:
+        </p>
+        <ul className="list-disc list-inside space-y-2 text-text-secondary mb-8">
+          <li>I tuoi dati JSON non lasciano mai il browser</li>
+          <li>Zero tracking, zero analytics sui contenuti</li>
+          <li>Codice open source verificabile</li>
+        </ul>
+
+        <div className="bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 rounded-xl p-8 text-center mt-12">
+          <h2 className="text-2xl font-bold mb-4 text-text-primary">📋 Inizia Subito</h2>
+          <p className="text-text-secondary mb-6">
+            Semplifica la validazione e documentazione delle tue API. Genera JSON Schema professionali in pochi secondi!
+          </p>
+          <a
+            href="/json-schema"
+            className="inline-block bg-primary hover:bg-primary-light text-bg-darkest px-8 py-3 rounded-lg font-semibold transition-colors"
+          >
+            Apri JSON Schema Converter →
+          </a>
+        </div>
+      </div>
+    )
+  },
   'come-validare-json-online': {
     title: 'Come Validare JSON Online Gratis: Guida Completa 2025',
     author: 'Team THEJORD',
