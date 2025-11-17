@@ -42,7 +42,7 @@ export default function About() {
           <h2 className="text-3xl font-bold mb-4 text-text-primary">🎯 La Nostra Missione</h2>
           <p className="text-text-secondary text-lg leading-relaxed mb-4">
             THEJORD.IT nasce con l'obiettivo di fornire agli sviluppatori italiani (e non solo)
-            una suite di strumenti online gratuiti, veloci e <strong className="text-primary-light">privacy-first</strong>.
+            una suite di strumenti online gratuiti, veloci e <strong className="text-primary-light">rispettosi della privacy</strong>.
           </p>
           <p className="text-text-secondary text-lg leading-relaxed">
             Crediamo che gli strumenti di sviluppo debbano essere:
@@ -51,8 +51,8 @@ export default function About() {
             <li className="flex items-start gap-3">
               <span className="text-2xl">🔒</span>
               <div>
-                <strong className="text-text-primary">Privacy-First</strong>
-                <p className="text-text-secondary">Tutto il processing avviene nel browser. Zero dati inviati ai server.</p>
+                <strong className="text-text-primary">Rispetto della Privacy</strong>
+                <p className="text-text-secondary">Tutto il processing avviene nel browser. I tuoi dati non vengono mai inviati ai nostri server.</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
@@ -151,10 +151,10 @@ export default function About() {
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <span className="text-yellow-500 text-xl">🔄</span>
+              <span className="text-green-500 text-xl">✅</span>
               <div>
-                <strong className="text-text-primary">Fase 2: Testing & CI/CD (In corso)</strong>
-                <p className="text-text-secondary">Unit tests, integration tests, GitHub Actions</p>
+                <strong className="text-text-primary">Fase 2: Testing & CI/CD (Completata)</strong>
+                <p className="text-text-secondary">82 tests totali (61 unit + 21 E2E), GitHub Actions automatizzato</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -185,35 +185,42 @@ export default function About() {
         <section className="bg-bg-surface border border-border rounded-xl p-8 mb-8">
           <h2 className="text-3xl font-bold mb-4 text-text-primary">🔒 Privacy & Security</h2>
           <p className="text-text-secondary mb-4">
-            La privacy è al centro di THEJORD.IT. Ecco come proteggiamo i tuoi dati:
+            La tua privacy è importante per noi. Ecco come proteggiamo i tuoi dati:
           </p>
           <ul className="space-y-3">
             <li className="flex items-start gap-3">
               <span className="text-green-500 text-xl">✓</span>
               <div>
                 <strong className="text-text-primary">100% Client-Side Processing</strong>
-                <p className="text-text-secondary">Tutto il processing avviene nel tuo browser. Nessun dato viene mai inviato ai nostri server.</p>
+                <p className="text-text-secondary">Tutto il processing degli strumenti avviene nel tuo browser. I tuoi dati (JSON, Base64, Hash, ecc.) non vengono mai inviati ai nostri server.</p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-blue-500 text-xl">ℹ️</span>
+              <div>
+                <strong className="text-text-primary">Google Analytics 4</strong>
+                <p className="text-text-secondary">Utilizziamo Google Analytics per comprendere come viene utilizzato il sito (pagine visitate, durata sessioni). Nessun dato personale o contenuto degli strumenti viene tracciato.</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-green-500 text-xl">✓</span>
               <div>
-                <strong className="text-text-primary">Zero Tracking</strong>
-                <p className="text-text-secondary">Nessun cookie di tracking, nessuna analytics invasiva, nessun fingerprinting.</p>
+                <strong className="text-text-primary">Nessun Account Richiesto</strong>
+                <p className="text-text-secondary">Non richiediamo registrazioni. Nessuna email, password o informazione personale necessaria.</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-green-500 text-xl">✓</span>
               <div>
                 <strong className="text-text-primary">Security Headers</strong>
-                <p className="text-text-secondary">CSP, HSTS, Permissions-Policy configurati per massima sicurezza.</p>
+                <p className="text-text-secondary">CSP, HSTS, Permissions-Policy configurati per massima sicurezza (9/10 security score).</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-green-500 text-xl">✓</span>
               <div>
-                <strong className="text-text-primary">Open Source</strong>
-                <p className="text-text-secondary">Il codice è pubblico. Puoi auditarlo tu stesso e verificare che non ci siano backdoor.</p>
+                <strong className="text-text-primary">Open Source & Auditabile</strong>
+                <p className="text-text-secondary">Il codice è pubblico su GitHub. Puoi verificare tu stesso che i dati rimangono nel browser e non ci siano backdoor.</p>
               </div>
             </li>
           </ul>
