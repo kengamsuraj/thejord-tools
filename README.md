@@ -36,13 +36,13 @@
 
 <div align="center">
 
-## 🎉 **What's New in v1.1.0** (January 2025)
+## 🎉 **What's New in v1.2.0** (November 2025)
 
-🔐 **Base64 File Operations** - Upload/download files with 50+ type detection
-🎨 **Toast Notifications** - Modern UI feedback replacing browser alerts
-📄 **JSON Single Quotes** - Convert JSON double quotes to single quotes
-🎯 **Reusable Layout** - Consistent navigation across all tools
-📖 **User Guide** - Complete documentation for all tools
+🕐 **Cron Expression Builder** - Visual cron schedule builder with pattern library
+📋 **JSON Schema Converter** - Generate JSON Schema from JSON data automatically
+🧪 **118 Unit Tests** - Comprehensive test coverage with 100% pass rate
+🚀 **CI/CD Automation** - Automated testing and deployment pipeline
+📝 **Blog Posts** - Detailed guides for new tools with real-world examples
 
 [View Full Changelog →](./CHANGELOG.md)
 
@@ -53,6 +53,7 @@
 | 📄 [JSON Formatter](https://thejord.it/json-formatter) | 🔐 [Base64 Tool](https://thejord.it/base64) | 🔍 [RegEx Tester](https://thejord.it/regex-tester) |
 |:--:|:--:|:--:|
 | **[Hash Generator](https://thejord.it/hash-generator)** | **[URL Tool](https://thejord.it/url-tool)** | **[Color Picker](https://thejord.it/color)** |
+| **[🕐 Cron Builder](https://thejord.it/cron-builder)** | **[📋 JSON Schema](https://thejord.it/json-schema)** | **[📝 Markdown](https://thejord.it/markdown)** |
 
 </div>
 
@@ -121,6 +122,8 @@
 | **🎨 Color Converter** | Convert between color formats | HEX, RGB, HSL, CMYK with visual picker |
 | **📰 Lorem Ipsum Generator** | Generate placeholder text | Words, sentences, paragraphs with stats |
 | **📊 Text Diff Checker** | Compare text line by line | Ignore whitespace, case-sensitive options |
+| **🕐 Cron Expression Builder** | Create and validate cron schedules | Visual builder, patterns, next runs preview |
+| **📋 JSON Schema Converter** | Generate JSON Schema from JSON | Format detection, Draft 2020-12/07 support |
 
 ---
 
@@ -199,9 +202,9 @@ npx playwright show-report
 ```
 
 **Test Coverage:**
-- ✅ **61 Unit Tests** - Base64 Tool comprehensive coverage
-- ✅ **21 E2E Tests** - JSON Formatter + Base64 file detection
-- ✅ **All file formats tested** - PNG, JPEG, GIF, BMP, WebP, PDF, ZIP, MP3, MP4, RAR, GZIP, 7-Zip
+- ✅ **118 Unit Tests** - Comprehensive coverage (Base64, Cron, JSON Schema, Smoke)
+- ✅ **35 E2E Tests** - JSON Formatter, Base64 file detection, Cron Builder
+- ✅ **100% Pass Rate** - All tests passing in CI/CD pipeline
 
 For detailed testing documentation, see **[docs/TESTING.md](./docs/TESTING.md)**
 
