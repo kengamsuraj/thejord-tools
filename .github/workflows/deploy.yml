@@ -140,3 +140,17 @@ jobs:
           echo "✅ Deployment completed successfully!"
           echo "🌐 Site: https://thejord.it"
           echo "📦 Image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest"
+
+      - name: Ping sitemap to search engines
+        run: |
+          echo "🔔 Notifying search engines about sitemap updates..."
+
+          # Ping Google
+          GOOGLE_RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" "https://www.google.com/ping?sitemap=https://thejord.it/sitemap.xml")
+          echo "📍 Google ping: HTTP $GOOGLE_RESPONSE"
+
+          # Ping Bing
+          BING_RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" "https://www.bing.com/ping?sitemap=https://thejord.it/sitemap.xml")
+          echo "📍 Bing ping: HTTP $BING_RESPONSE"
+
+          echo "✅ Sitemap notifications sent to Google and Bing"
