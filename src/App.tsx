@@ -74,67 +74,67 @@ function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           <Link to="/json-formatter" className="bg-bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20 cursor-pointer">
             <div className="text-3xl mb-4">📄</div>
-            <h3 className="text-xl font-bold mb-2 text-text-primary">JSON Formatter</h3>
+            <h2 className="text-xl font-bold mb-2 text-text-primary">JSON Formatter</h2>
             <p className="text-text-secondary">Format, validate and beautify JSON</p>
           </Link>
 
           <Link to="/base64" className="bg-bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20 cursor-pointer">
             <div className="text-3xl mb-4">🔐</div>
-            <h3 className="text-xl font-bold mb-2 text-text-primary">Base64 Encoder/Decoder</h3>
+            <h2 className="text-xl font-bold mb-2 text-text-primary">Base64 Encoder/Decoder</h2>
             <p className="text-text-secondary">Encode and decode Base64 strings</p>
           </Link>
 
           <Link to="/regex-tester" className="bg-bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20 cursor-pointer">
             <div className="text-3xl mb-4">🔍</div>
-            <h3 className="text-xl font-bold mb-2 text-text-primary">RegExp Tester</h3>
+            <h2 className="text-xl font-bold mb-2 text-text-primary">RegExp Tester</h2>
             <p className="text-text-secondary">Test regular expressions with pattern library</p>
           </Link>
 
           <Link to="/hash-generator" className="bg-bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20 cursor-pointer">
             <div className="text-3xl mb-4">🔑</div>
-            <h3 className="text-xl font-bold mb-2 text-text-primary">Hash Generator</h3>
+            <h2 className="text-xl font-bold mb-2 text-text-primary">Hash Generator</h2>
             <p className="text-text-secondary">Generate MD5, SHA-1, SHA-256, SHA-512 hashes</p>
           </Link>
 
           <Link to="/url-tool" className="bg-bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20 cursor-pointer">
             <div className="text-3xl mb-4">🔗</div>
-            <h3 className="text-xl font-bold mb-2 text-text-primary">URL Encoder/Decoder</h3>
+            <h2 className="text-xl font-bold mb-2 text-text-primary">URL Encoder/Decoder</h2>
             <p className="text-text-secondary">Encode and decode URLs and components</p>
           </Link>
 
           <Link to="/markdown" className="bg-bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20 cursor-pointer">
             <div className="text-3xl mb-4">📝</div>
-            <h3 className="text-xl font-bold mb-2 text-text-primary">Markdown to HTML</h3>
+            <h2 className="text-xl font-bold mb-2 text-text-primary">Markdown to HTML</h2>
             <p className="text-text-secondary">Convert Markdown to HTML with live preview</p>
           </Link>
 
           <Link to="/color" className="bg-bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20 cursor-pointer">
             <div className="text-3xl mb-4">🎨</div>
-            <h3 className="text-xl font-bold mb-2 text-text-primary">Color Converter</h3>
+            <h2 className="text-xl font-bold mb-2 text-text-primary">Color Converter</h2>
             <p className="text-text-secondary">Pick colors and convert HEX, RGB, HSL, CMYK</p>
           </Link>
 
           <Link to="/lorem" className="bg-bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20 cursor-pointer">
             <div className="text-3xl mb-4">📄</div>
-            <h3 className="text-xl font-bold mb-2 text-text-primary">Lorem Ipsum Generator</h3>
+            <h2 className="text-xl font-bold mb-2 text-text-primary">Lorem Ipsum Generator</h2>
             <p className="text-text-secondary">Generate placeholder text for mockups</p>
           </Link>
 
           <Link to="/diff" className="bg-bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20 cursor-pointer">
             <div className="text-3xl mb-4">🔍</div>
-            <h3 className="text-xl font-bold mb-2 text-text-primary">Text Diff Checker</h3>
+            <h2 className="text-xl font-bold mb-2 text-text-primary">Text Diff Checker</h2>
             <p className="text-text-secondary">Compare two texts and highlight differences</p>
           </Link>
 
           <Link to="/cron-builder" className="bg-bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20 cursor-pointer">
             <div className="text-3xl mb-4">🕐</div>
-            <h3 className="text-xl font-bold mb-2 text-text-primary">Cron Expression Builder</h3>
+            <h2 className="text-xl font-bold mb-2 text-text-primary">Cron Expression Builder</h2>
             <p className="text-text-secondary">Build and validate cron schedules visually</p>
           </Link>
 
           <Link to="/json-schema" className="bg-bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20 cursor-pointer">
             <div className="text-3xl mb-4">📋</div>
-            <h3 className="text-xl font-bold mb-2 text-text-primary">JSON Schema Converter</h3>
+            <h2 className="text-xl font-bold mb-2 text-text-primary">JSON Schema Converter</h2>
             <p className="text-text-secondary">Convert JSON to JSON Schema automatically</p>
           </Link>
         </div>
@@ -211,11 +211,12 @@ function App() {
           borderTop: '1px solid #374151',
         }}
         buttonStyle={{
-          background: '#3B82F6',
+          background: '#2563EB',
           color: '#ffffff',
           fontSize: '14px',
+          fontWeight: '600',
           borderRadius: '6px',
-          padding: '8px 16px',
+          padding: '10px 20px',
         }}
         declineButtonStyle={{
           background: '#374151',
