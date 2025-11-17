@@ -5,6 +5,20 @@ All notable changes to THEJORD.IT will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.1] - 2025-11-17
+
+### Fixed
+- **Content Security Policy (CSP)** - Added proper CSP meta tag to allow Google Analytics and Cloudflare Insights scripts
+- **Accessibility - Contrast Ratio** - Cookie consent button now uses darker blue (#2563EB) for WCAG AA compliance (4.5:1 contrast)
+- **Accessibility - Heading Hierarchy** - Changed tool cards from `<h3>` to `<h2>` for proper sequential heading structure
+
+### Added
+- **Favicon** - New SVG favicon with "TJ" initials in gradient style
+- **Logo** - New SVG logo (200x200) with "TJ" initials and glow effect for branding
+
+### Changed
+- **Cookie consent button** - Increased font-weight to 600 and padding to 10px 20px for better visibility and touch targets
+
 ## [1.2.0] - 2025-11-17
 
 ### Added
