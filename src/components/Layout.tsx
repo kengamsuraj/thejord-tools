@@ -14,9 +14,7 @@ export default function Layout({ children, currentPage = 'tools', showFullNav = 
         <nav className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <Link to="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-xl font-bold shadow-lg shadow-primary/40">
-                ⚡
-              </div>
+              <img src="/logo.svg" alt="The Jord Logo" className="w-10 h-10" />
               <span className="text-2xl font-bold bg-gradient-to-r from-primary-light to-secondary-light bg-clip-text text-transparent">
                 THE JORD
               </span>
