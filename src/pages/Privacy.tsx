@@ -1,11 +1,17 @@
 import Layout from '../components/Layout'
 import { useTranslation } from 'react-i18next'
+import SEO from '../components/SEO'
 
 export default function Privacy() {
   const { t } = useTranslation()
 
   return (
     <Layout showFullNav={false}>
+      <SEO
+        title="Privacy Policy - THEJORD.IT"
+        description="THEJORD.IT Privacy Policy: How we collect, use, and protect your data. GDPR compliant, 100% client-side processing, IP anonymization."
+        path="/privacy"
+      />
 
       <main className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold mb-8">

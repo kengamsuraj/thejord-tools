@@ -1,6 +1,7 @@
 import Layout from '../components/Layout'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import SEO from '../components/SEO'
 
 export default function Contact() {
   const { t } = useTranslation()
@@ -38,6 +39,11 @@ export default function Contact() {
 
   return (
     <Layout currentPage="contact">
+      <SEO
+        title="Contact THEJORD.IT - Get in Touch"
+        description="Contact the THEJORD.IT team for questions, bug reports, feature requests, or security issues. We're here to help!"
+        path="/contact"
+      />
 
       <main className="max-w-4xl mx-auto px-4 py-12">
         {/* Hero Section */}

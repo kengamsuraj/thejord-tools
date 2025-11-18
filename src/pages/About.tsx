@@ -1,12 +1,18 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 
 export default function About() {
   const { t } = useTranslation()
 
   return (
     <Layout currentPage="about">
+      <SEO
+        title="About THEJORD.IT - Developer Tools Platform"
+        description="Learn about THEJORD.IT: the Italian alternative to IT-Tools. Our mission, tech stack, roadmap, and commitment to privacy and open source."
+        path="/about"
+      />
 
       <main className="max-w-4xl mx-auto px-4 py-12">
         {/* Hero Section */}

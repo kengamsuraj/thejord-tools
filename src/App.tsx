@@ -6,6 +6,7 @@ import { initGA, trackPageView } from './lib/analytics'
 import { RoutePreloader } from './components/RoutePreloader'
 import Footer from './components/Footer'
 import LanguageSwitcher from './components/LanguageSwitcher'
+import SEO from './components/SEO'
 
 // Lazy load all page components for code splitting
 const JsonFormatter = lazy(() => import('./pages/JsonFormatter'))
@@ -43,6 +44,11 @@ function Home() {
 
   return (
     <div className="min-h-screen bg-bg-darkest">
+      <SEO
+        title="THEJORD.IT - Free Developer Tools"
+        description="Modern, fast, and free tools for developers. JSON formatter, Base64 encoder, RegExp tester, and more. 100% client-side, privacy-focused."
+        path="/"
+      />
       <header className="bg-bg-dark border-b border-border sticky top-0 z-50">
         <nav className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
