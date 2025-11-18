@@ -38,7 +38,7 @@ function PageLoader() {
 function Home() {
   return (
     <div className="min-h-screen bg-bg-darkest">
-      <header className="bg-bg-dark border-b border-border">
+      <header className="bg-bg-dark border-b border-border sticky top-0 z-50">
         <nav className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <Link to="/" className="flex items-center gap-3">

@@ -93,7 +93,7 @@ export default function JsonSchemaConverter() {
   }
 
   return (
-    <Layout>
+    <Layout showFullNav={false}>
       <Helmet>
         <title>JSON to JSON Schema Converter - Generate JSON Schema | THEJORD.IT</title>
         <meta name="description" content="Convert JSON to JSON Schema automatically. Supports Draft 2020-12 and Draft 07. Auto-detects types, formats (email, URI, UUID), nested objects. Perfect for OpenAPI, API validation, Ajv." />
