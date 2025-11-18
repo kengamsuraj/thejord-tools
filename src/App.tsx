@@ -1,9 +1,11 @@
 import { useEffect, lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import CookieConsent from 'react-cookie-consent'
 import { initGA, trackPageView } from './lib/analytics'
 import { RoutePreloader } from './components/RoutePreloader'
 import Footer from './components/Footer'
+import LanguageSwitcher from './components/LanguageSwitcher'
 
 // Lazy load all page components for code splitting
 const JsonFormatter = lazy(() => import('./pages/JsonFormatter'))
@@ -37,6 +39,8 @@ function PageLoader() {
 }
 
 function Home() {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-bg-darkest">
       <header className="bg-bg-dark border-b border-border sticky top-0 z-50">
@@ -51,11 +55,12 @@ function Home() {
                 THE JORD
               </span>
             </Link>
-            <div className="flex gap-6">
-              <Link to="/" className="text-text-secondary hover:text-primary-light transition-colors">Tools</Link>
-              <Link to="/blog" className="text-text-secondary hover:text-primary-light transition-colors">Blog</Link>
-              <Link to="/about" className="text-text-secondary hover:text-primary-light transition-colors">About</Link>
-              <Link to="/contact" className="text-text-secondary hover:text-primary-light transition-colors">Contact</Link>
+            <div className="flex items-center gap-6">
+              <Link to="/" className="text-text-secondary hover:text-primary-light transition-colors">{t('nav.tools')}</Link>
+              <Link to="/blog" className="text-text-secondary hover:text-primary-light transition-colors">{t('nav.blog')}</Link>
+              <Link to="/about" className="text-text-secondary hover:text-primary-light transition-colors">{t('nav.about')}</Link>
+              <Link to="/contact" className="text-text-secondary hover:text-primary-light transition-colors">{t('nav.contact')}</Link>
+              <LanguageSwitcher />
             </div>
           </div>
         </nav>
@@ -65,79 +70,79 @@ function Home() {
         <div className="text-center py-20">
           <h1 className="text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-primary-light to-secondary-light bg-clip-text text-transparent">
-              Developer Tools
+              {t('home.title')}
             </span>
           </h1>
           <p className="text-xl text-text-muted">
-            Modern, fast, and free tools for developers
+            {t('home.subtitle')}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           <Link to="/json-formatter" className="bg-bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20 cursor-pointer">
             <div className="text-3xl mb-4">📄</div>
-            <h2 className="text-xl font-bold mb-2 text-text-primary">JSON Formatter</h2>
-            <p className="text-text-secondary">Format, validate and beautify JSON</p>
+            <h2 className="text-xl font-bold mb-2 text-text-primary">{t('home.tools.jsonFormatter.name')}</h2>
+            <p className="text-text-secondary">{t('home.tools.jsonFormatter.desc')}</p>
           </Link>
 
           <Link to="/base64" className="bg-bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20 cursor-pointer">
             <div className="text-3xl mb-4">🔐</div>
-            <h2 className="text-xl font-bold mb-2 text-text-primary">Base64 Encoder/Decoder</h2>
-            <p className="text-text-secondary">Encode and decode Base64 strings</p>
+            <h2 className="text-xl font-bold mb-2 text-text-primary">{t('home.tools.base64.name')}</h2>
+            <p className="text-text-secondary">{t('home.tools.base64.desc')}</p>
           </Link>
 
           <Link to="/regex-tester" className="bg-bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20 cursor-pointer">
             <div className="text-3xl mb-4">🔍</div>
-            <h2 className="text-xl font-bold mb-2 text-text-primary">RegExp Tester</h2>
-            <p className="text-text-secondary">Test regular expressions with pattern library</p>
+            <h2 className="text-xl font-bold mb-2 text-text-primary">{t('home.tools.regexTester.name')}</h2>
+            <p className="text-text-secondary">{t('home.tools.regexTester.desc')}</p>
           </Link>
 
           <Link to="/hash-generator" className="bg-bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20 cursor-pointer">
             <div className="text-3xl mb-4">🔑</div>
-            <h2 className="text-xl font-bold mb-2 text-text-primary">Hash Generator</h2>
-            <p className="text-text-secondary">Generate MD5, SHA-1, SHA-256, SHA-512 hashes</p>
+            <h2 className="text-xl font-bold mb-2 text-text-primary">{t('home.tools.hashGenerator.name')}</h2>
+            <p className="text-text-secondary">{t('home.tools.hashGenerator.desc')}</p>
           </Link>
 
           <Link to="/url-tool" className="bg-bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20 cursor-pointer">
             <div className="text-3xl mb-4">🔗</div>
-            <h2 className="text-xl font-bold mb-2 text-text-primary">URL Encoder/Decoder</h2>
-            <p className="text-text-secondary">Encode and decode URLs and components</p>
+            <h2 className="text-xl font-bold mb-2 text-text-primary">{t('home.tools.urlTool.name')}</h2>
+            <p className="text-text-secondary">{t('home.tools.urlTool.desc')}</p>
           </Link>
 
           <Link to="/markdown" className="bg-bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20 cursor-pointer">
             <div className="text-3xl mb-4">📝</div>
-            <h2 className="text-xl font-bold mb-2 text-text-primary">Markdown to HTML</h2>
-            <p className="text-text-secondary">Convert Markdown to HTML with live preview</p>
+            <h2 className="text-xl font-bold mb-2 text-text-primary">{t('home.tools.markdown.name')}</h2>
+            <p className="text-text-secondary">{t('home.tools.markdown.desc')}</p>
           </Link>
 
           <Link to="/color" className="bg-bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20 cursor-pointer">
             <div className="text-3xl mb-4">🎨</div>
-            <h2 className="text-xl font-bold mb-2 text-text-primary">Color Converter</h2>
-            <p className="text-text-secondary">Pick colors and convert HEX, RGB, HSL, CMYK</p>
+            <h2 className="text-xl font-bold mb-2 text-text-primary">{t('home.tools.color.name')}</h2>
+            <p className="text-text-secondary">{t('home.tools.color.desc')}</p>
           </Link>
 
           <Link to="/lorem" className="bg-bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20 cursor-pointer">
             <div className="text-3xl mb-4">📄</div>
-            <h2 className="text-xl font-bold mb-2 text-text-primary">Lorem Ipsum Generator</h2>
-            <p className="text-text-secondary">Generate placeholder text for mockups</p>
+            <h2 className="text-xl font-bold mb-2 text-text-primary">{t('home.tools.lorem.name')}</h2>
+            <p className="text-text-secondary">{t('home.tools.lorem.desc')}</p>
           </Link>
 
           <Link to="/diff" className="bg-bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20 cursor-pointer">
             <div className="text-3xl mb-4">🔍</div>
-            <h2 className="text-xl font-bold mb-2 text-text-primary">Text Diff Checker</h2>
-            <p className="text-text-secondary">Compare two texts and highlight differences</p>
+            <h2 className="text-xl font-bold mb-2 text-text-primary">{t('home.tools.diff.name')}</h2>
+            <p className="text-text-secondary">{t('home.tools.diff.desc')}</p>
           </Link>
 
           <Link to="/cron-builder" className="bg-bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20 cursor-pointer">
             <div className="text-3xl mb-4">🕐</div>
-            <h2 className="text-xl font-bold mb-2 text-text-primary">Cron Expression Builder</h2>
-            <p className="text-text-secondary">Build and validate cron schedules visually</p>
+            <h2 className="text-xl font-bold mb-2 text-text-primary">{t('home.tools.cron.name')}</h2>
+            <p className="text-text-secondary">{t('home.tools.cron.desc')}</p>
           </Link>
 
           <Link to="/json-schema" className="bg-bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20 cursor-pointer">
             <div className="text-3xl mb-4">📋</div>
-            <h2 className="text-xl font-bold mb-2 text-text-primary">JSON Schema Converter</h2>
-            <p className="text-text-secondary">Convert JSON to JSON Schema automatically</p>
+            <h2 className="text-xl font-bold mb-2 text-text-primary">{t('home.tools.jsonSchema.name')}</h2>
+            <p className="text-text-secondary">{t('home.tools.jsonSchema.desc')}</p>
           </Link>
         </div>
       </main>

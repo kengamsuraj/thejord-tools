@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "tools": "Tools",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact",
+    "backToTools": "← Back to Tools"
+  },
+  "home": {
+    "title": "Developer Tools",
+    "subtitle": "Modern, fast, and free tools for developers",
+    "tools": {
+      "jsonFormatter": {
+        "name": "JSON Formatter",
+        "desc": "Format, validate and beautify JSON"
+      },
+      "base64": {
+        "name": "Base64 Encoder/Decoder",
+        "desc": "Encode and decode Base64 strings"
+      },
+      "regexTester": {
+        "name": "RegExp Tester",
+        "desc": "Test regular expressions with pattern library"
+      },
+      "hashGenerator": {
+        "name": "Hash Generator",
+        "desc": "Generate MD5, SHA-1, SHA-256, SHA-512 hashes"
+      },
+      "urlTool": {
+        "name": "URL Encoder/Decoder",
+        "desc": "Encode and decode URLs and components"
+      },
+      "markdown": {
+        "name": "Markdown to HTML",
+        "desc": "Convert Markdown to HTML with live preview"
+      },
+      "color": {
+        "name": "Color Converter",
+        "desc": "Pick colors and convert HEX, RGB, HSL, CMYK"
+      },
+      "lorem": {
+        "name": "Lorem Ipsum Generator",
+        "desc": "Generate placeholder text for mockups"
+      },
+      "diff": {
+        "name": "Text Diff Checker",
+        "desc": "Compare two texts and highlight differences"
+      },
+      "cron": {
+        "name": "Cron Expression Builder",
+        "desc": "Build and validate cron schedules visually"
+      },
+      "jsonSchema": {
+        "name": "JSON Schema Converter",
+        "desc": "Convert JSON to JSON Schema automatically"
+      }
+    }
+  },
+  "footer": {
+    "brand": {
+      "tagline": "Free developer tools with a focus on privacy and simplicity."
+    },
+    "quickLinks": "Quick Links",
+    "community": "Community",
+    "legal": "Legal",
+    "github": "GitHub",
+    "issues": "Issues & Bug Reports",
+    "changelog": "Changelog",
+    "contributing": "Contributing",
+    "privacy": "Privacy Policy",
+    "about": "About Us",
+    "contact": "Contact",
+    "mitLicense": "MIT License",
+    "madeWith": "Made with ❤️ in Italy 🇮🇹",
+    "copyright": "© {{year}} THEJORD.IT • 11 free tools for developers",
+    "values": {
+      "openSource": "100% Open Source",
+      "clientSide": "100% Client-Side",
+      "free": "100% Free"
+    }
+  },
+  "language": {
+    "current": "English",
+    "switch": "Switch language"
+  }
+}

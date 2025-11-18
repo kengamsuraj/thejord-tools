@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "tools": "Tools",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contattaci",
+    "backToTools": "← Torna ai Tools"
+  },
+  "home": {
+    "title": "Developer Tools",
+    "subtitle": "Strumenti moderni, veloci e gratuiti per sviluppatori",
+    "tools": {
+      "jsonFormatter": {
+        "name": "JSON Formatter",
+        "desc": "Formatta, valida e abbellisci JSON"
+      },
+      "base64": {
+        "name": "Base64 Encoder/Decoder",
+        "desc": "Codifica e decodifica stringhe Base64"
+      },
+      "regexTester": {
+        "name": "RegExp Tester",
+        "desc": "Testa espressioni regolari con libreria di pattern"
+      },
+      "hashGenerator": {
+        "name": "Hash Generator",
+        "desc": "Genera hash MD5, SHA-1, SHA-256, SHA-512"
+      },
+      "urlTool": {
+        "name": "URL Encoder/Decoder",
+        "desc": "Codifica e decodifica URL e componenti"
+      },
+      "markdown": {
+        "name": "Markdown to HTML",
+        "desc": "Converti Markdown in HTML con anteprima live"
+      },
+      "color": {
+        "name": "Color Converter",
+        "desc": "Seleziona colori e converti HEX, RGB, HSL, CMYK"
+      },
+      "lorem": {
+        "name": "Lorem Ipsum Generator",
+        "desc": "Genera testo segnaposto per mockup"
+      },
+      "diff": {
+        "name": "Text Diff Checker",
+        "desc": "Confronta due testi ed evidenzia le differenze"
+      },
+      "cron": {
+        "name": "Cron Expression Builder",
+        "desc": "Costruisci e valida espressioni cron visivamente"
+      },
+      "jsonSchema": {
+        "name": "JSON Schema Converter",
+        "desc": "Converti JSON in JSON Schema automaticamente"
+      }
+    }
+  },
+  "footer": {
+    "brand": {
+      "tagline": "Strumenti gratuiti per sviluppatori con focus su privacy e semplicità."
+    },
+    "quickLinks": "Quick Links",
+    "community": "Community",
+    "legal": "Legal",
+    "github": "GitHub",
+    "issues": "Issues & Bug Reports",
+    "changelog": "Changelog",
+    "contributing": "Contributing",
+    "privacy": "Privacy Policy",
+    "about": "About Us",
+    "contact": "Contattaci",
+    "mitLicense": "MIT License",
+    "madeWith": "Made with ❤️ in Italy 🇮🇹",
+    "copyright": "© {{year}} THEJORD.IT • 11 strumenti gratuiti per sviluppatori",
+    "values": {
+      "openSource": "100% Open Source",
+      "clientSide": "100% Client-Side",
+      "free": "100% Gratuito"
+    }
+  },
+  "language": {
+    "current": "Italiano",
+    "switch": "Cambia lingua"
+  }
+}

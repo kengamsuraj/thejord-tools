@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { ReactNode } from 'react';
+import { useTranslation } from 'react-i18next';
 import Footer from './Footer';
+import LanguageSwitcher from './LanguageSwitcher';
 
 interface LayoutProps {
   children: ReactNode;
@@ -9,6 +11,8 @@ interface LayoutProps {
 }
 
 export default function Layout({ children, currentPage = 'tools', showFullNav = true }: LayoutProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-bg-darkest">
       <header className={`bg-bg-dark border-b border-border ${showFullNav ? 'sticky top-0 z-50' : ''}`}>
@@ -24,37 +28,39 @@ export default function Layout({ children, currentPage = 'tools', showFullNav = 
               </span>
             </Link>
             {showFullNav ? (
-              <div className="flex gap-6">
+              <div className="flex items-center gap-6">
                 <Link
                   to="/"
                   className={`${currentPage === 'tools' ? 'text-primary-light' : 'text-text-secondary hover:text-primary-light'} transition-colors`}
                 >
-                  Tools
+                  {t('nav.tools')}
                 </Link>
                 <Link
                   to="/blog"
                   className={`${currentPage === 'blog' ? 'text-primary-light' : 'text-text-secondary hover:text-primary-light'} transition-colors`}
                 >
-                  Blog
+                  {t('nav.blog')}
                 </Link>
                 <Link
                   to="/about"
                   className={`${currentPage === 'about' ? 'text-primary-light' : 'text-text-secondary hover:text-primary-light'} transition-colors`}
                 >
-                  About
+                  {t('nav.about')}
                 </Link>
                 <Link
                   to="/contact"
                   className={`${currentPage === 'contact' ? 'text-primary-light' : 'text-text-secondary hover:text-primary-light'} transition-colors`}
                 >
-                  Contact
+                  {t('nav.contact')}
                 </Link>
+                <LanguageSwitcher />
               </div>
             ) : (
-              <div className="flex gap-6">
+              <div className="flex items-center gap-4">
                 <Link to="/" className="text-text-secondary hover:text-primary-light transition-colors">
-                  ← Back to Tools
+                  {t('nav.backToTools')}
                 </Link>
+                <LanguageSwitcher />
               </div>
             )}
           </div>
