@@ -338,6 +338,32 @@
       "title": "📬 Resta Aggiornato",
       "message": "Seguici su GitHub per ricevere notifiche sui nuovi articoli e aggiornamenti del progetto!",
       "cta": "Seguici su GitHub"
+    },
+    "posts": {
+      "cronBuilder": {
+        "title": "Cron Expression Builder: Pianifica Task Automatici con Facilità",
+        "excerpt": "Scopri il nostro nuovo Cron Expression Builder: crea e valida espressioni cron con un'interfaccia visuale intuitiva. Pattern predefiniti, validazione real-time e anteprima delle prossime esecuzioni."
+      },
+      "jsonSchema": {
+        "title": "JSON Schema Converter: Genera Schemi di Validazione Automaticamente",
+        "excerpt": "Converti JSON in JSON Schema con un click. Rileva automaticamente tipi e formati, genera schemi Draft 2020-12 o Draft 07, e documenta le tue API in modo professionale."
+      },
+      "jsonValidation": {
+        "title": "Come Validare JSON Online Gratis: Guida Completa 2025",
+        "excerpt": "Scopri come validare JSON online in modo rapido e sicuro con il nostro JSON Formatter privacy-first. Guida completa con esempi, conversione formati e funzionalità avanzate."
+      },
+      "base64Guide": {
+        "title": "Base64 Encoder Online: Guida Completa con Rilevamento File",
+        "excerpt": "Codifica e decodifica testo e file in Base64 con rilevamento automatico di 50+ tipi di file. Supporto completo per immagini, PDF, archivi e molto altro."
+      },
+      "regexTester": {
+        "title": "RegEx Tester Italiano: 30+ Pattern Pronti all'Uso",
+        "excerpt": "Testa espressioni regolari con 30+ pattern predefiniti: email, URL, codice fiscale, partita IVA, telefono italiano e molto altro. Testing in tempo reale."
+      },
+      "launch": {
+        "title": "Lancio di THEJORD.IT: Developer Tools Privacy-First Made in Italy",
+        "excerpt": "Oggi lanciamo THEJORD.IT, una suite di strumenti per sviluppatori completamente gratuita, open source e privacy-first. Scopri perché l'abbiamo creata e cosa ci rende diversi."
+      }
     }
   },
   "changelog": {

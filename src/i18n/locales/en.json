@@ -338,6 +338,32 @@
       "title": "📬 Stay Updated",
       "message": "Follow us on GitHub to receive notifications about new articles and project updates!",
       "cta": "Follow us on GitHub"
+    },
+    "posts": {
+      "cronBuilder": {
+        "title": "Cron Expression Builder: Schedule Automated Tasks with Ease",
+        "excerpt": "Discover our new Cron Expression Builder: create and validate cron expressions with an intuitive visual interface. Predefined patterns, real-time validation, and preview of next executions."
+      },
+      "jsonSchema": {
+        "title": "JSON Schema Converter: Generate Validation Schemas Automatically",
+        "excerpt": "Convert JSON to JSON Schema with one click. Automatically detect types and formats, generate Draft 2020-12 or Draft 07 schemas, and document your APIs professionally."
+      },
+      "jsonValidation": {
+        "title": "How to Validate JSON Online Free: Complete Guide 2025",
+        "excerpt": "Discover how to validate JSON online quickly and securely with our privacy-first JSON Formatter. Complete guide with examples, format conversion, and advanced features."
+      },
+      "base64Guide": {
+        "title": "Base64 Encoder Online: Complete Guide with File Detection",
+        "excerpt": "Encode and decode text and files in Base64 with automatic detection of 50+ file types. Full support for images, PDFs, archives, and much more."
+      },
+      "regexTester": {
+        "title": "RegEx Tester: 30+ Ready-to-Use Patterns",
+        "excerpt": "Test regular expressions with 30+ predefined patterns: email, URL, phone numbers, and much more. Real-time testing with instant results."
+      },
+      "launch": {
+        "title": "Launching THEJORD.IT: Privacy-First Developer Tools Made in Italy",
+        "excerpt": "Today we launch THEJORD.IT, a completely free, open source, and privacy-first suite of developer tools. Discover why we created it and what makes us different."
+      }
     }
   },
   "changelog": {

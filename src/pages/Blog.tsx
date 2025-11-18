@@ -3,78 +3,78 @@ import { useTranslation } from 'react-i18next'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 
-// Blog posts data (temporary - will move to database/CMS later)
-const blogPosts = [
-  {
-    id: 'cron-expression-builder',
-    slug: 'cron-expression-builder',
-    title: 'Cron Expression Builder: Pianifica Task Automatici con Facilità',
-    excerpt: 'Scopri il nostro nuovo Cron Expression Builder: crea e valida espressioni cron con un\'interfaccia visuale intuitiva. Pattern predefiniti, validazione real-time e anteprima delle prossime esecuzioni.',
-    author: 'THEJORD Team',
-    date: '2025-11-17',
-    readTime: '10 min',
-    tags: ['Tools', 'Cron', 'Automation'],
-    image: '🕐'
-  },
-  {
-    id: 'json-schema-converter',
-    slug: 'json-schema-converter',
-    title: 'JSON Schema Converter: Genera Schemi di Validazione Automaticamente',
-    excerpt: 'Converti JSON in JSON Schema con un click. Rileva automaticamente tipi e formati, genera schemi Draft 2020-12 o Draft 07, e documenta le tue API in modo professionale.',
-    author: 'THEJORD Team',
-    date: '2025-11-17',
-    readTime: '12 min',
-    tags: ['Tools', 'JSON', 'API'],
-    image: '📋'
-  },
-  {
-    id: 'come-validare-json-online',
-    slug: 'come-validare-json-online',
-    title: 'Come Validare JSON Online Gratis: Guida Completa 2025',
-    excerpt: 'Scopri come validare JSON online in modo rapido e sicuro con il nostro JSON Formatter privacy-first. Guida completa con esempi, conversione formati e funzionalità avanzate.',
-    author: 'Team THEJORD',
-    date: '2025-01-13',
-    readTime: '8 min',
-    tags: ['Tutorial', 'JSON', 'Developer Tools'],
-    image: '📄'
-  },
-  {
-    id: 'base64-encoder-decoder-guida',
-    slug: 'base64-encoder-decoder-guida',
-    title: 'Base64 Encoder Online: Guida Completa con Rilevamento File',
-    excerpt: 'Codifica e decodifica testo e file in Base64 con rilevamento automatico di 50+ tipi di file. Supporto completo per immagini, PDF, archivi e molto altro.',
-    author: 'Team THEJORD',
-    date: '2025-01-13',
-    readTime: '7 min',
-    tags: ['Tutorial', 'Base64', 'Security'],
-    image: '🔐'
-  },
-  {
-    id: 'regex-tester-italiano-pattern',
-    slug: 'regex-tester-italiano-pattern',
-    title: 'RegEx Tester Italiano: 30+ Pattern Pronti all\'Uso',
-    excerpt: 'Testa espressioni regolari con 30+ pattern predefiniti: email, URL, codice fiscale, partita IVA, telefono italiano e molto altro. Testing in tempo reale.',
-    author: 'Team THEJORD',
-    date: '2025-01-13',
-    readTime: '6 min',
-    tags: ['Tutorial', 'RegEx', 'Developer Tools'],
-    image: '🔍'
-  },
-  {
-    id: 'lancio-thejord-it',
-    slug: 'lancio-thejord-it',
-    title: 'Lancio di THEJORD.IT: Developer Tools Privacy-First Made in Italy',
-    excerpt: 'Oggi lanciamo THEJORD.IT, una suite di strumenti per sviluppatori completamente gratuita, open source e privacy-first. Scopri perché l\'abbiamo creata e cosa ci rende diversi.',
-    author: 'Team THEJORD',
-    date: '2025-01-12',
-    readTime: '5 min',
-    tags: ['Announcement', 'Open Source', 'Privacy'],
-    image: '📢'
-  }
-]
-
 export default function Blog() {
   const { t, i18n } = useTranslation()
+
+  // Blog posts data (temporary - will move to database/CMS later)
+  const blogPosts = [
+    {
+      id: 'cron-expression-builder',
+      slug: 'cron-expression-builder',
+      titleKey: 'blog.posts.cronBuilder.title',
+      excerptKey: 'blog.posts.cronBuilder.excerpt',
+      author: 'THEJORD Team',
+      date: '2025-11-17',
+      readTime: '10 min',
+      tags: ['Tools', 'Cron', 'Automation'],
+      image: '🕐'
+    },
+    {
+      id: 'json-schema-converter',
+      slug: 'json-schema-converter',
+      titleKey: 'blog.posts.jsonSchema.title',
+      excerptKey: 'blog.posts.jsonSchema.excerpt',
+      author: 'THEJORD Team',
+      date: '2025-11-17',
+      readTime: '12 min',
+      tags: ['Tools', 'JSON', 'API'],
+      image: '📋'
+    },
+    {
+      id: 'come-validare-json-online',
+      slug: 'come-validare-json-online',
+      titleKey: 'blog.posts.jsonValidation.title',
+      excerptKey: 'blog.posts.jsonValidation.excerpt',
+      author: 'Team THEJORD',
+      date: '2025-01-13',
+      readTime: '8 min',
+      tags: ['Tutorial', 'JSON', 'Developer Tools'],
+      image: '📄'
+    },
+    {
+      id: 'base64-encoder-decoder-guida',
+      slug: 'base64-encoder-decoder-guida',
+      titleKey: 'blog.posts.base64Guide.title',
+      excerptKey: 'blog.posts.base64Guide.excerpt',
+      author: 'Team THEJORD',
+      date: '2025-01-13',
+      readTime: '7 min',
+      tags: ['Tutorial', 'Base64', 'Security'],
+      image: '🔐'
+    },
+    {
+      id: 'regex-tester-italiano-pattern',
+      slug: 'regex-tester-italiano-pattern',
+      titleKey: 'blog.posts.regexTester.title',
+      excerptKey: 'blog.posts.regexTester.excerpt',
+      author: 'Team THEJORD',
+      date: '2025-01-13',
+      readTime: '6 min',
+      tags: ['Tutorial', 'RegEx', 'Developer Tools'],
+      image: '🔍'
+    },
+    {
+      id: 'lancio-thejord-it',
+      slug: 'lancio-thejord-it',
+      titleKey: 'blog.posts.launch.title',
+      excerptKey: 'blog.posts.launch.excerpt',
+      author: 'Team THEJORD',
+      date: '2025-01-12',
+      readTime: '5 min',
+      tags: ['Announcement', 'Open Source', 'Privacy'],
+      image: '📢'
+    }
+  ]
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString)
@@ -133,12 +133,12 @@ export default function Blog() {
 
                     {/* Title */}
                     <h2 className="text-2xl font-bold mb-3 text-text-primary group-hover:text-primary-light transition-colors">
-                      {post.title}
+                      {t(post.titleKey)}
                     </h2>
 
                     {/* Excerpt */}
                     <p className="text-text-secondary mb-4 line-clamp-2">
-                      {post.excerpt}
+                      {t(post.excerptKey)}
                     </p>
 
                     {/* Meta */}
