@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import CryptoJS from 'crypto-js';
 import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 import Toast from '../components/Toast';
 
 type HashAlgorithm = 'MD5' | 'SHA1' | 'SHA256' | 'SHA512' | 'SHA3';
@@ -114,6 +115,11 @@ export default function HashGenerator() {
 
   return (
     <Layout showFullNav={false}>
+      <SEO
+        title="Hash Generator - THEJORD.IT"
+        description="Generate MD5, SHA-1, SHA-256, SHA-512 hashes online. Free hash generator for text and files with instant results."
+        path="/hash-generator"
+      />
       <main className="max-w-7xl mx-auto px-4 py-8">
         <div className="mb-6">
           <h1 className="text-4xl font-bold mb-2">

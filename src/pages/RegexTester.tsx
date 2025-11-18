@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { REGEX_PATTERNS, CATEGORIES, RegexPattern } from '../lib/regex-patterns';
 import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 
 interface Match {
   match: string;
@@ -107,6 +108,11 @@ export default function RegexTester() {
 
   return (
     <Layout showFullNav={false}>
+      <SEO
+        title="RegEx Tester - THEJORD.IT"
+        description="Test regular expressions online with 30+ predefined patterns. Real-time regex testing for email, URL, phone numbers, and more."
+        path="/regex-tester"
+      />
       <main className="max-w-7xl mx-auto px-4 py-8">
         <div className="mb-6">
           <h1 className="text-4xl font-bold mb-2">

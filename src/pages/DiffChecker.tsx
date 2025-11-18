@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 
 interface DiffLine {
   type: 'equal' | 'added' | 'removed';
@@ -112,6 +113,11 @@ export default function DiffChecker() {
 
   return (
     <Layout showFullNav={false}>
+      <SEO
+        title="Text Diff Checker - THEJORD.IT"
+        description="Compare two texts and highlight differences online. Free diff checker with side-by-side and inline views."
+        path="/diff-checker"
+      />
       <div className="max-w-7xl mx-auto p-6">
         {/* Header */}
         <div className="text-center mb-8">

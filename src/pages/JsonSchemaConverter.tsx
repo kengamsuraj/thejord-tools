@@ -1,4 +1,5 @@
 import Layout from '../components/Layout'
+import SEO from '../components/SEO';
 import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import MonacoJsonEditor from '../components/MonacoJsonEditor'
@@ -94,6 +95,11 @@ export default function JsonSchemaConverter() {
 
   return (
     <Layout showFullNav={false}>
+      <SEO
+        title="JSON Schema Converter - THEJORD.IT"
+        description="Convert JSON to JSON Schema automatically. Free JSON Schema generator with Draft 2020-12 and Draft 07 support."
+        path="/json-schema"
+      />
       <Helmet>
         <title>JSON to JSON Schema Converter - Generate JSON Schema | THEJORD.IT</title>
         <meta name="description" content="Convert JSON to JSON Schema automatically. Supports Draft 2020-12 and Draft 07. Auto-detects types, formats (email, URI, UUID), nested objects. Perfect for OpenAPI, API validation, Ajv." />

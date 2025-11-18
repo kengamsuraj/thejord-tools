@@ -5,6 +5,7 @@ import MonacoJsonEditor from '../components/MonacoJsonEditor';
 import JsonTree from '../components/JsonTree';
 import JsonDiff from '../components/JsonDiff';
 import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 
 const DEFAULT_OPTIONS: FormatOptions = {
   indent: 4,
@@ -147,6 +148,11 @@ export default function JsonFormatter() {
 
   return (
     <Layout showFullNav={false}>
+      <SEO
+        title="JSON Formatter - THEJORD.IT"
+        description="Format, validate, and beautify JSON online. Free JSON formatter with syntax highlighting, tree view, and conversion to CSV, XML, YAML."
+        path="/json-formatter"
+      />
       <main className="max-w-7xl mx-auto px-4 py-8">
         <div className="mb-6">
           <h1 className="text-4xl font-bold mb-2">

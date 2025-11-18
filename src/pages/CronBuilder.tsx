@@ -1,4 +1,5 @@
 import Layout from '../components/Layout'
+import SEO from '../components/SEO';
 import { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 import {
@@ -94,6 +95,11 @@ export default function CronBuilder() {
 
   return (
     <Layout showFullNav={false}>
+      <SEO
+        title="Cron Expression Builder - THEJORD.IT"
+        description="Build and validate cron expressions visually. Free cron builder with predefined patterns and next execution preview."
+        path="/cron-builder"
+      />
       <Helmet>
         <title>Cron Expression Builder - Visual Cron Schedule Creator | THEJORD.IT</title>
         <meta name="description" content="Create and validate cron expressions with our visual builder. Pattern library, real-time validation, next 5 executions preview. Perfect for Linux crontab, GitHub Actions, Jenkins, Kubernetes CronJobs." />

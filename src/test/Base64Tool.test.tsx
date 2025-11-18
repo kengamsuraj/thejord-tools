@@ -1,7 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
-import { render, screen, waitFor, fireEvent } from '@testing-library/react'
+import { render, screen, waitFor, fireEvent } from './test-utils'
 import userEvent from '@testing-library/user-event'
-import { BrowserRouter } from 'react-router-dom'
 import Base64Tool from '../pages/Base64Tool'
 
 // Mock react-router-dom Link component
@@ -16,11 +15,7 @@ vi.mock('react-router-dom', async () => {
 })
 
 const renderBase64Tool = () => {
-  return render(
-    <BrowserRouter>
-      <Base64Tool />
-    </BrowserRouter>
-  )
+  return render(<Base64Tool />)
 }
 
 describe('Base64Tool', () => {

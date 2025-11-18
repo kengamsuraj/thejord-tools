@@ -350,6 +350,18 @@
       "tech": "🔧 Technical Improvements"
     }
   },
+  "tools": {
+    "common": {
+      "input": "Input",
+      "output": "Output",
+      "clear": "Clear",
+      "copy": "Copy",
+      "download": "Download",
+      "upload": "Upload File",
+      "sample": "Sample",
+      "options": "Options"
+    }
+  },
   "language": {
     "current": "English",
     "switch": "Switch language"

@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
 import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 import Toast from '../components/Toast';
 import { detectFileType, getFileIcon, DetectedFileType } from '../lib/file-detection';
 
@@ -233,6 +234,11 @@ export default function Base64Tool() {
 
   return (
     <Layout showFullNav={false}>
+      <SEO
+        title="Base64 Encoder/Decoder - THEJORD.IT"
+        description="Encode and decode Base64 strings online. Free Base64 tool with file upload support and automatic file type detection."
+        path="/base64"
+      />
       <main className="max-w-7xl mx-auto px-4 py-8">
         <div className="mb-6">
           <h1 className="text-4xl font-bold mb-2">

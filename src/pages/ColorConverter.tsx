@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 
 interface ColorFormats {
   hex: string;
@@ -127,6 +128,11 @@ export default function ColorConverter() {
 
   return (
     <Layout showFullNav={false}>
+      <SEO
+        title="Color Picker & Converter - THEJORD.IT"
+        description="Pick colors and convert between HEX, RGB, HSL, CMYK formats. Free color converter with visual picker and palette generation."
+        path="/color-converter"
+      />
       <div className="max-w-6xl mx-auto p-6">
         {/* Header */}
         <div className="text-center mb-8">

@@ -350,6 +350,18 @@
       "tech": "🔧 Miglioramenti Tecnici"
     }
   },
+  "tools": {
+    "common": {
+      "input": "Input",
+      "output": "Output",
+      "clear": "Pulisci",
+      "copy": "Copia",
+      "download": "Scarica",
+      "upload": "Carica File",
+      "sample": "Esempio",
+      "options": "Opzioni"
+    }
+  },
   "language": {
     "current": "Italiano",
     "switch": "Cambia lingua"

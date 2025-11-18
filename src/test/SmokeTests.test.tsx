@@ -1,6 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { render, screen } from '@testing-library/react'
-import { BrowserRouter } from 'react-router-dom'
+import { render, screen } from './test-utils'
 import RegexTester from '../pages/RegexTester'
 import HashGenerator from '../pages/HashGenerator'
 import UrlTool from '../pages/UrlTool'
@@ -10,11 +9,7 @@ import LoremIpsumGenerator from '../pages/LoremIpsumGenerator'
 import DiffChecker from '../pages/DiffChecker'
 
 const renderComponent = (Component: React.ComponentType) => {
-  return render(
-    <BrowserRouter>
-      <Component />
-    </BrowserRouter>
-  )
+  return render(<Component />)
 }
 
 describe('Smoke Tests - All Tools', () => {

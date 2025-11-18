@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 
 const LOREM_WORDS = [
   'lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipiscing', 'elit',
@@ -88,6 +89,11 @@ export default function LoremIpsumGenerator() {
 
   return (
     <Layout showFullNav={false}>
+      <SEO
+        title="Lorem Ipsum Generator - THEJORD.IT"
+        description="Generate Lorem Ipsum placeholder text online. Free Lorem Ipsum generator for mockups and design projects."
+        path="/lorem-ipsum"
+      />
       <div className="max-w-5xl mx-auto p-6">
         {/* Header */}
         <div className="text-center mb-8">
