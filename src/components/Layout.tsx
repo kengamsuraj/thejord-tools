@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import Footer from './Footer';
-import LanguageSwitcher from './LanguageSwitcher';
+// import LanguageSwitcher from './LanguageSwitcher'; // Temporarily disabled
 
 interface LayoutProps {
   children: ReactNode;
@@ -53,14 +53,16 @@ export default function Layout({ children, currentPage = 'tools', showFullNav = 
                 >
                   {t('nav.contact')}
                 </Link>
-                <LanguageSwitcher />
+                {/* Language switcher temporarily hidden - will be enabled with CMS implementation */}
+                {/* <LanguageSwitcher /> */}
               </div>
             ) : (
               <div className="flex items-center gap-4">
                 <Link to="/" className="text-text-secondary hover:text-primary-light transition-colors">
                   {t('nav.backToTools')}
                 </Link>
-                <LanguageSwitcher />
+                {/* Language switcher temporarily hidden - will be enabled with CMS implementation */}
+                {/* <LanguageSwitcher /> */}
               </div>
             )}
           </div>

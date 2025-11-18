@@ -1,6 +1,6 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
-import LanguageDetector from 'i18next-browser-languagedetector'
+// import LanguageDetector from 'i18next-browser-languagedetector' // Disabled - force Italian only
 import translationIT from './locales/it.json'
 import translationEN from './locales/en.json'
 
@@ -14,17 +14,18 @@ const resources = {
 }
 
 i18n
-  .use(LanguageDetector) // Detect browser language
+  // .use(LanguageDetector) // Language detection disabled - force Italian only
   .use(initReactI18next) // Pass i18n to react-i18next
   .init({
     resources,
-    fallbackLng: 'it', // Italian first
+    lng: 'it', // Force Italian language
+    fallbackLng: 'it',
     supportedLngs: ['it', 'en'],
-    detection: {
-      order: ['localStorage', 'navigator'], // Check localStorage first, then browser
-      caches: ['localStorage'],
-      lookupLocalStorage: 'i18nextLng'
-    },
+    // detection: {
+    //   order: ['localStorage', 'navigator'],
+    //   caches: ['localStorage'],
+    //   lookupLocalStorage: 'i18nextLng'
+    // },
     interpolation: {
       escapeValue: false // React already escapes
     }
