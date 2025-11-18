@@ -42,7 +42,10 @@ function Home() {
         <nav className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <Link to="/" className="flex items-center gap-3">
-              <img src="/logo.png" alt="The Jord Logo" className="h-12 w-auto" />
+              <picture>
+                <source srcSet="/logo.webp" type="image/webp" />
+                <img src="/logo.png" alt="The Jord Logo" className="h-12 w-auto" width="96" height="89" />
+              </picture>
               <span className="text-2xl font-bold bg-gradient-to-r from-primary-light to-secondary-light bg-clip-text text-transparent">
                 THE JORD
               </span>
