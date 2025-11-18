@@ -1,28 +1,9 @@
 import { Link } from 'react-router-dom'
+import Layout from '../components/Layout'
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-bg-darkest">
-      <header className="bg-bg-dark border-b border-border">
-        <nav className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
-            <Link to="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-xl font-bold shadow-lg shadow-primary/40">
-                ⚡
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-primary-light to-secondary-light bg-clip-text text-transparent">
-                THE JORD
-              </span>
-            </Link>
-            <div className="flex gap-6">
-              <Link to="/" className="text-text-secondary hover:text-primary-light transition-colors">Tools</Link>
-              <Link to="/blog" className="text-text-secondary hover:text-primary-light transition-colors">Blog</Link>
-              <Link to="/about" className="text-primary-light">About</Link>
-              <Link to="/contact" className="text-text-secondary hover:text-primary-light transition-colors">Contact</Link>
-            </div>
-          </div>
-        </nav>
-      </header>
+    <Layout currentPage="about">
 
       <main className="max-w-4xl mx-auto px-4 py-12">
         {/* Hero Section */}
@@ -252,24 +233,6 @@ export default function About() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-bg-dark border-t border-border mt-16 py-8">
-        <div className="max-w-7xl mx-auto px-4 text-center text-text-muted">
-          <p className="mb-2">Made with ❤️ in Italy 🇮🇹</p>
-          <p className="text-sm">
-            <a href="https://github.com/thejord-it/thejord-tools" target="_blank" rel="noopener noreferrer" className="hover:text-primary-light transition-colors">
-              Open Source
-            </a>
-            {' • '}
-            <Link to="/about" className="hover:text-primary-light transition-colors">About</Link>
-            {' • '}
-            <Link to="/contact" className="hover:text-primary-light transition-colors">Contact</Link>
-            {' • '}
-            <a href="https://github.com/thejord-it/thejord-tools/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer" className="hover:text-primary-light transition-colors">
-              Security
-            </a>
-          </p>
-        </div>
-      </footer>
-    </div>
+      </Layout>
   )
 }
