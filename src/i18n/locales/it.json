@@ -56,6 +56,253 @@
       }
     }
   },
+  "about": {
+    "title": "About THEJORD.IT",
+    "subtitle": "L'alternativa italiana a IT-Tools. Strumenti per sviluppatori con focus su privacy e semplicità.",
+    "mission": {
+      "title": "🎯 La Nostra Missione",
+      "intro": "THEJORD.IT nasce con l'obiettivo di fornire agli sviluppatori italiani (e non solo) una suite di strumenti online gratuiti, veloci e rispettosi della privacy.",
+      "belief": "Crediamo che gli strumenti di sviluppo debbano essere:",
+      "privacy": {
+        "title": "Rispetto della Privacy",
+        "desc": "Tutto il processing avviene nel browser. I tuoi dati non vengono mai inviati ai nostri server."
+      },
+      "fast": {
+        "title": "Veloci",
+        "desc": "Ottimizzati per performance. Niente attese, niente latenza."
+      },
+      "intuitive": {
+        "title": "Intuitivi",
+        "desc": "UI pulita e moderna. Niente fronzoli, solo funzionalità."
+      },
+      "opensource": {
+        "title": "Open Source",
+        "desc": "Codice pubblico su GitHub. Audit, contributi e trasparenza."
+      }
+    },
+    "techStack": {
+      "title": "🏗️ Stack Tecnologico",
+      "intro": "THEJORD.IT è costruito con tecnologie moderne e performanti:",
+      "frontend": "Frontend",
+      "infrastructure": "Infrastructure"
+    },
+    "openSource": {
+      "title": "💻 Open Source",
+      "intro": "THEJORD.IT è completamente open source e disponibile su GitHub sotto licenza MIT.",
+      "viewGitHub": "View on GitHub",
+      "reportBug": "Report Bug / Request Feature"
+    },
+    "roadmap": {
+      "title": "🗺️ Roadmap",
+      "intro": "Stiamo costantemente migliorando THEJORD.IT. Ecco cosa abbiamo in programma:",
+      "phase1": {
+        "title": "Fase 1: Foundation (Completata)",
+        "desc": "9 strumenti essenziali, deployment Docker/K3s, SEO e security"
+      },
+      "phase2": {
+        "title": "Fase 2: Testing & CI/CD (Completata)",
+        "desc": "82 tests totali (61 unit + 21 E2E), GitHub Actions automatizzato"
+      },
+      "phase3": {
+        "title": "Fase 3: Next.js Migration (Prossimamente)",
+        "desc": "SSR/SSG per SEO 9/10, migliore indicizzazione"
+      },
+      "phase4": {
+        "title": "Fase 4: Backend & Features",
+        "desc": "PDF tools, Blog, User authentication, Issue tracking"
+      },
+      "phase5": {
+        "title": "Fase 5: Advanced Tools",
+        "desc": "20+ tool totali, API pubblica, Analytics"
+      }
+    },
+    "privacySecurity": {
+      "title": "🔒 Privacy & Security",
+      "intro": "La tua privacy è importante per noi. Ecco come proteggiamo i tuoi dati:",
+      "clientSide": {
+        "title": "100% Client-Side Processing",
+        "desc": "Tutto il processing degli strumenti avviene nel tuo browser. I tuoi dati (JSON, Base64, Hash, ecc.) non vengono mai inviati ai nostri server."
+      },
+      "analytics": {
+        "title": "Google Analytics 4",
+        "desc": "Utilizziamo Google Analytics per comprendere come viene utilizzato il sito (pagine visitate, durata sessioni). Nessun dato personale o contenuto degli strumenti viene tracciato."
+      },
+      "noAccount": {
+        "title": "Nessun Account Richiesto",
+        "desc": "Non richiediamo registrazioni. Nessuna email, password o informazione personale necessaria."
+      },
+      "securityHeaders": {
+        "title": "Security Headers",
+        "desc": "CSP, HSTS, Permissions-Policy configurati per massima sicurezza (9/10 security score)."
+      },
+      "auditable": {
+        "title": "Open Source & Auditabile",
+        "desc": "Il codice è pubblico su GitHub. Puoi verificare tu stesso che i dati rimangono nel browser e non ci siano backdoor."
+      }
+    },
+    "contactCta": {
+      "title": "💬 Hai domande o suggerimenti?",
+      "desc": "Siamo sempre felici di ricevere feedback dalla community!",
+      "contact": "Contattaci",
+      "openIssue": "Apri una Issue su GitHub"
+    }
+  },
+  "contact": {
+    "title": "Contattaci",
+    "subtitle": "Hai domande, suggerimenti o hai trovato un bug? Siamo qui per aiutarti!",
+    "methods": {
+      "title": "💬 Come Contattarci",
+      "email": {
+        "title": "Email",
+        "desc": "Per domande generali e supporto"
+      },
+      "github": {
+        "title": "GitHub Issues",
+        "desc": "Per bug report e feature request"
+      },
+      "discussions": {
+        "title": "GitHub Discussions",
+        "desc": "Per domande alla community",
+        "cta": "Partecipa alle discussioni"
+      }
+    },
+    "security": {
+      "title": "Security Vulnerabilities",
+      "warning": "Se hai trovato una vulnerabilità di sicurezza, NON aprire una issue pubblica.",
+      "instruction": "Invia una email a: admin@thejord.it con oggetto \"SECURITY\""
+    },
+    "form": {
+      "title": "📝 Invia un Messaggio",
+      "name": "Nome",
+      "namePlaceholder": "Il tuo nome",
+      "email": "Email",
+      "emailPlaceholder": "tua@email.com",
+      "type": "Tipo",
+      "types": {
+        "question": "Domanda",
+        "bug": "Bug Report",
+        "feature": "Feature Request",
+        "feedback": "Feedback",
+        "other": "Altro"
+      },
+      "subject": "Oggetto",
+      "subjectPlaceholder": "Breve descrizione",
+      "message": "Messaggio",
+      "messagePlaceholder": "Scrivi qui il tuo messaggio...",
+      "submit": "Invia Messaggio",
+      "disclaimer": "Cliccando \"Invia Messaggio\" si aprirà il tuo client email con il messaggio pre-compilato."
+    },
+    "faq": {
+      "title": "❓ Domande Frequenti",
+      "contribute": {
+        "q": "Come posso contribuire al progetto?",
+        "a": "THEJORD.IT è open source! Puoi contribuire aprendo issue, proponendo feature o inviando pull request su GitHub. Leggi la nostra Contributing Guide per maggiori informazioni."
+      },
+      "security": {
+        "q": "I miei dati sono al sicuro?",
+        "a": "Assolutamente sì! Tutti gli strumenti di THEJORD.IT funzionano interamente nel browser. Nessun dato viene mai inviato ai nostri server. Leggi la nostra Security Policy."
+      },
+      "selfHost": {
+        "q": "Posso self-hostare THEJORD.IT?",
+        "a": "Certo! Il progetto è open source e include configurazioni Docker e Kubernetes. Trovi le istruzioni nel README."
+      },
+      "cost": {
+        "q": "Quanto costa usare THEJORD.IT?",
+        "a": "THEJORD.IT è completamente gratuito e sempre lo sarà. Non ci sono piani premium, nessun limite di utilizzo, nessuna registrazione richiesta."
+      },
+      "request": {
+        "q": "Posso richiedere un nuovo tool?",
+        "a": "Certamente! Apri una feature request su GitHub o contattaci via email. Valutiamo tutte le proposte!"
+      }
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdate": "Ultimo aggiornamento:",
+    "sections": {
+      "intro": {
+        "title": "1. Introduzione",
+        "p1": "Benvenuto su THEJORD.IT (\"noi\", \"nostro\" o \"il sito\"). Rispettiamo la tua privacy e ci impegniamo a proteggerla attraverso la nostra conformità con questa politica.",
+        "p2": "Questa Privacy Policy descrive i tipi di informazioni che raccogliamo da te o che ci fornisci quando visiti il sito thejord.it e le nostre pratiche per raccogliere, utilizzare, mantenere, proteggere e divulgare tali informazioni."
+      },
+      "dataCollection": {
+        "title": "2. Informazioni che Raccogliamo",
+        "analytics": {
+          "title": "2.1 Dati di Navigazione (Google Analytics)",
+          "intro": "Utilizziamo Google Analytics 4 per raccogliere informazioni su come utilizzi il nostro sito, inclusi:",
+          "items": [
+            "Pagine visitate e durata della visita",
+            "Dispositivo utilizzato (desktop, mobile, tablet)",
+            "Browser e sistema operativo",
+            "Paese e città di provenienza (basato su indirizzo IP anonimizzato)",
+            "Sorgente del traffico (ricerca Google, link diretto, etc.)",
+            "Interazioni con gli strumenti (tool utilizzati, funzionalità usate)"
+          ],
+          "anonymization": "Anonimizzazione IP: Utilizziamo la funzione di anonimizzazione IP di Google Analytics, che rimuove l'ultimo ottetto del tuo indirizzo IP prima che venga memorizzato."
+        },
+        "local": {
+          "title": "2.2 Dati Elaborati Localmente",
+          "desc": "Tutti i dati che inserisci nei nostri strumenti (JSON, Base64, testo, etc.) sono elaborati esclusivamente nel tuo browser. Non vengono mai inviati ai nostri server o a terze parti."
+        }
+      },
+      "usage": {
+        "title": "3. Come Utilizziamo le Tue Informazioni",
+        "intro": "Utilizziamo le informazioni raccolte per:",
+        "items": {
+          "improve": "Migliorare il sito: Capire quali strumenti sono più utilizzati per prioritizzare lo sviluppo",
+          "optimize": "Ottimizzare l'esperienza: Analizzare il comportamento degli utenti per migliorare l'interfaccia",
+          "strategy": "Decisioni strategiche: Decidere quali lingue supportare, quali paesi targetizzare, etc.",
+          "monitor": "Monitorare le prestazioni: Identificare problemi tecnici e tempi di caricamento"
+        }
+      },
+      "cookies": {
+        "title": "4. Cookie e Tecnologie di Tracciamento",
+        "intro": "Utilizziamo i seguenti tipi di cookie:",
+        "consent": "Cookie di Consenso: Per ricordare la tua scelta riguardo ai cookie (365 giorni)",
+        "analytics": "Cookie di Google Analytics: Per raccogliere dati analitici (vedere documentazione ufficiale)",
+        "manage": "Puoi rifiutare i cookie in qualsiasi momento tramite le impostazioni del tuo browser o il banner dei cookie del sito."
+      },
+      "sharing": {
+        "title": "5. Condivisione dei Dati",
+        "noSale": "Non vendiamo, affittiamo o scambiamo i tuoi dati personali con terze parti.",
+        "google": "I dati raccolti tramite Google Analytics sono soggetti alla Privacy Policy di Google."
+      },
+      "rights": {
+        "title": "6. I Tuoi Diritti (GDPR)",
+        "intro": "Se risiedi nell'Unione Europea, hai i seguenti diritti:",
+        "access": "Diritto di accesso: Puoi richiedere una copia dei dati che abbiamo su di te",
+        "rectification": "Diritto di rettifica: Puoi richiedere la correzione di dati inesatti",
+        "erasure": "Diritto alla cancellazione: Puoi richiedere la cancellazione dei tuoi dati",
+        "objection": "Diritto di opposizione: Puoi opporti al trattamento dei tuoi dati",
+        "portability": "Diritto alla portabilità: Puoi richiedere i tuoi dati in formato leggibile",
+        "contact": "Per esercitare questi diritti, contattaci a: privacy@thejord.it"
+      },
+      "security": {
+        "title": "7. Sicurezza dei Dati",
+        "intro": "Implementiamo misure di sicurezza tecniche e organizzative per proteggere i tuoi dati, inclusi:",
+        "items": [
+          "HTTPS/TLS per tutte le comunicazioni",
+          "Security headers (CSP, HSTS, X-Frame-Options)",
+          "Elaborazione client-side dei dati degli strumenti",
+          "Anonimizzazione IP in Google Analytics"
+        ]
+      },
+      "thirdParty": {
+        "title": "8. Link a Siti di Terze Parti",
+        "desc": "Il nostro sito può contenere link a siti di terze parti. Non siamo responsabili per le pratiche di privacy di questi siti. Ti consigliamo di leggere le loro privacy policy."
+      },
+      "changes": {
+        "title": "9. Modifiche a Questa Privacy Policy",
+        "desc": "Potremmo aggiornare questa Privacy Policy periodicamente. Ti informeremo di eventuali modifiche pubblicando la nuova Privacy Policy su questa pagina e aggiornando la data di \"Ultimo aggiornamento\"."
+      },
+      "contact": {
+        "title": "10. Contatti",
+        "intro": "Per domande su questa Privacy Policy, contattaci:",
+        "email": "Email: privacy@thejord.it",
+        "website": "Sito: https://thejord.it"
+      }
+    }
+  },
   "footer": {
     "brand": {
       "tagline": "Strumenti gratuiti per sviluppatori con focus su privacy e semplicità."
