@@ -30,77 +30,59 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-text-primary mb-4">2. Informazioni che Raccogliamo</h2>
+            <h2 className="text-2xl font-bold text-text-primary mb-4">{t('privacy.sections.dataCollection.title')}</h2>
 
-            <h3 className="text-xl font-semibold text-text-primary mb-2">2.1 Dati di Navigazione (Google Analytics)</h3>
+            <h3 className="text-xl font-semibold text-text-primary mb-2">{t('privacy.sections.dataCollection.analytics.title')}</h3>
             <p>
-              Utilizziamo Google Analytics 4 per raccogliere informazioni su come utilizzi il nostro sito, inclusi:
+              {t('privacy.sections.dataCollection.analytics.intro')}
             </p>
             <ul className="list-disc list-inside space-y-2 ml-4">
-              <li>Pagine visitate e durata della visita</li>
-              <li>Dispositivo utilizzato (desktop, mobile, tablet)</li>
-              <li>Browser e sistema operativo</li>
-              <li>Paese e città di provenienza (basato su indirizzo IP anonimizzato)</li>
-              <li>Sorgente del traffico (ricerca Google, link diretto, etc.)</li>
-              <li>Interazioni con gli strumenti (tool utilizzati, funzionalità usate)</li>
+              {(t('privacy.sections.dataCollection.analytics.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
             <p className="mt-4">
-              <strong>Anonimizzazione IP:</strong> Utilizziamo la funzione di anonimizzazione IP di Google Analytics,
-              che rimuove l'ultimo ottetto del tuo indirizzo IP prima che venga memorizzato.
+              {t('privacy.sections.dataCollection.analytics.anonymization')}
             </p>
 
-            <h3 className="text-xl font-semibold text-text-primary mb-2 mt-6">2.2 Dati Elaborati Localmente</h3>
+            <h3 className="text-xl font-semibold text-text-primary mb-2 mt-6">{t('privacy.sections.dataCollection.local.title')}</h3>
             <p>
-              Tutti i dati che inserisci nei nostri strumenti (JSON, Base64, testo, etc.) sono elaborati
-              <strong> esclusivamente nel tuo browser</strong>. Non vengono mai inviati ai nostri server o a terze parti.
+              {t('privacy.sections.dataCollection.local.desc')}
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-text-primary mb-4">3. Come Utilizziamo le Tue Informazioni</h2>
-            <p>Utilizziamo le informazioni raccolte per:</p>
+            <h2 className="text-2xl font-bold text-text-primary mb-4">{t('privacy.sections.usage.title')}</h2>
+            <p>{t('privacy.sections.usage.intro')}</p>
             <ul className="list-disc list-inside space-y-2 ml-4">
-              <li><strong>Migliorare il sito:</strong> Capire quali strumenti sono più utilizzati per prioritizzare lo sviluppo</li>
-              <li><strong>Ottimizzare l'esperienza:</strong> Analizzare il comportamento degli utenti per migliorare l'interfaccia</li>
-              <li><strong>Decisioni strategiche:</strong> Decidere quali lingue supportare, quali paesi targetizzare, etc.</li>
-              <li><strong>Monitorare le prestazioni:</strong> Identificare problemi tecnici e tempi di caricamento</li>
+              <li>{t('privacy.sections.usage.items.improve')}</li>
+              <li>{t('privacy.sections.usage.items.optimize')}</li>
+              <li>{t('privacy.sections.usage.items.strategy')}</li>
+              <li>{t('privacy.sections.usage.items.monitor')}</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-text-primary mb-4">4. Cookie e Tecnologie di Tracciamento</h2>
+            <h2 className="text-2xl font-bold text-text-primary mb-4">{t('privacy.sections.cookies.title')}</h2>
             <p>
-              Utilizziamo i seguenti tipi di cookie:
+              {t('privacy.sections.cookies.intro')}
             </p>
             <ul className="list-disc list-inside space-y-2 ml-4">
-              <li>
-                <strong>Cookie di Consenso:</strong> Per ricordare la tua scelta riguardo ai cookie (365 giorni)
-              </li>
-              <li>
-                <strong>Cookie di Google Analytics:</strong> Per raccogliere dati analitici (vedere{' '}
-                <a
-                  href="https://developers.google.com/analytics/devguides/collection/ga4/cookie-usage"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary-light hover:underline"
-                >
-                  documentazione ufficiale
-                </a>
-                )
-              </li>
+              <li>{t('privacy.sections.cookies.consent')}</li>
+              <li>{t('privacy.sections.cookies.analytics')}</li>
             </ul>
             <p className="mt-4">
-              Puoi rifiutare i cookie in qualsiasi momento tramite le impostazioni del tuo browser o il banner dei cookie del sito.
+              {t('privacy.sections.cookies.manage')}
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-text-primary mb-4">5. Condivisione dei Dati</h2>
+            <h2 className="text-2xl font-bold text-text-primary mb-4">{t('privacy.sections.sharing.title')}</h2>
             <p>
-              <strong>Non vendiamo, affittiamo o scambiamo i tuoi dati personali con terze parti.</strong>
+              <strong>{t('privacy.sections.sharing.noSale')}</strong>
             </p>
             <p>
-              I dati raccolti tramite Google Analytics sono soggetti alla{' '}
+              {t('privacy.sections.sharing.google')}{' '}
               <a
                 href="https://policies.google.com/privacy"
                 target="_blank"
@@ -114,68 +96,62 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-text-primary mb-4">6. I Tuoi Diritti (GDPR)</h2>
+            <h2 className="text-2xl font-bold text-text-primary mb-4">{t('privacy.sections.rights.title')}</h2>
             <p>
-              Se risiedi nell'Unione Europea, hai i seguenti diritti:
+              {t('privacy.sections.rights.intro')}
             </p>
             <ul className="list-disc list-inside space-y-2 ml-4">
-              <li><strong>Diritto di accesso:</strong> Puoi richiedere una copia dei dati che abbiamo su di te</li>
-              <li><strong>Diritto di rettifica:</strong> Puoi richiedere la correzione di dati inesatti</li>
-              <li><strong>Diritto alla cancellazione:</strong> Puoi richiedere la cancellazione dei tuoi dati</li>
-              <li><strong>Diritto di opposizione:</strong> Puoi opporti al trattamento dei tuoi dati</li>
-              <li><strong>Diritto alla portabilità:</strong> Puoi richiedere i tuoi dati in formato leggibile</li>
+              <li><strong>{t('privacy.sections.rights.access').split(':')[0]}:</strong> {t('privacy.sections.rights.access').split(':')[1]}</li>
+              <li><strong>{t('privacy.sections.rights.rectification').split(':')[0]}:</strong> {t('privacy.sections.rights.rectification').split(':')[1]}</li>
+              <li><strong>{t('privacy.sections.rights.erasure').split(':')[0]}:</strong> {t('privacy.sections.rights.erasure').split(':')[1]}</li>
+              <li><strong>{t('privacy.sections.rights.objection').split(':')[0]}:</strong> {t('privacy.sections.rights.objection').split(':')[1]}</li>
+              <li><strong>{t('privacy.sections.rights.portability').split(':')[0]}:</strong> {t('privacy.sections.rights.portability').split(':')[1]}</li>
             </ul>
             <p className="mt-4">
-              Per esercitare questi diritti, contattaci a:{' '}
-              <a href="mailto:privacy@thejord.it" className="text-primary-light hover:underline">
-                privacy@thejord.it
-              </a>
+              {t('privacy.sections.rights.contact')}
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-text-primary mb-4">7. Sicurezza dei Dati</h2>
+            <h2 className="text-2xl font-bold text-text-primary mb-4">{t('privacy.sections.security.title')}</h2>
             <p>
-              Implementiamo misure di sicurezza tecniche e organizzative per proteggere i tuoi dati, inclusi:
+              {t('privacy.sections.security.intro')}
             </p>
             <ul className="list-disc list-inside space-y-2 ml-4">
-              <li>HTTPS/TLS per tutte le comunicazioni</li>
-              <li>Security headers (CSP, HSTS, X-Frame-Options)</li>
-              <li>Elaborazione client-side dei dati degli strumenti</li>
-              <li>Anonimizzazione IP in Google Analytics</li>
+              {(t('privacy.sections.security.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-text-primary mb-4">8. Link a Siti di Terze Parti</h2>
+            <h2 className="text-2xl font-bold text-text-primary mb-4">{t('privacy.sections.thirdParty.title')}</h2>
             <p>
-              Il nostro sito può contenere link a siti di terze parti. Non siamo responsabili per le pratiche di privacy
-              di questi siti. Ti consigliamo di leggere le loro privacy policy.
+              {t('privacy.sections.thirdParty.desc')}
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-text-primary mb-4">9. Modifiche a Questa Privacy Policy</h2>
+            <h2 className="text-2xl font-bold text-text-primary mb-4">{t('privacy.sections.changes.title')}</h2>
             <p>
-              Potremmo aggiornare questa Privacy Policy periodicamente. Ti informeremo di eventuali modifiche pubblicando
-              la nuova Privacy Policy su questa pagina e aggiornando la data di "Ultimo aggiornamento".
+              {t('privacy.sections.changes.desc')}
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-text-primary mb-4">10. Contatti</h2>
+            <h2 className="text-2xl font-bold text-text-primary mb-4">{t('privacy.sections.contact.title')}</h2>
             <p>
-              Per domande su questa Privacy Policy, contattaci:
+              {t('privacy.sections.contact.intro')}
             </p>
             <ul className="list-none space-y-2 ml-4 mt-4">
               <li>
-                <strong>Email:</strong>{' '}
+                <strong>{t('privacy.sections.contact.email').split(':')[0]}:</strong>{' '}
                 <a href="mailto:privacy@thejord.it" className="text-primary-light hover:underline">
                   privacy@thejord.it
                 </a>
               </li>
               <li>
-                <strong>Sito:</strong>{' '}
+                <strong>{t('privacy.sections.contact.website').split(':')[0]}:</strong>{' '}
                 <a href="https://thejord.it" className="text-primary-light hover:underline">
                   https://thejord.it
                 </a>
