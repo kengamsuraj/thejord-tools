@@ -1,18 +1,27 @@
-import Layout from '../components/Layout';
+import { useTranslation } from 'react-i18next'
+import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 
 export default function Changelog() {
+  const { t } = useTranslation()
+
   return (
     <Layout currentPage="about">
+      <SEO
+        title="Changelog - THEJORD.IT"
+        description="All important changes and updates to THEJORD.IT. Track new features, improvements, and bug fixes."
+        path="/changelog"
+      />
       <main className="max-w-4xl mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-primary-light to-secondary-light bg-clip-text text-transparent">
-              Changelog
+              {t('changelog.title')}
             </span>
           </h1>
           <p className="text-xl text-text-muted max-w-2xl mx-auto">
-            Tutte le modifiche importanti a THEJORD.IT sono documentate qui.
+            {t('changelog.subtitle')}
           </p>
         </div>
 
@@ -27,7 +36,7 @@ export default function Changelog() {
 
           <div className="bg-bg-surface rounded-xl border border-border p-6 mb-6">
             <h3 className="text-2xl font-bold mb-4 text-green-400 flex items-center gap-2">
-              <span>✨</span> Aggiunte
+              {t('changelog.sections.additions')}
             </h3>
             <ul className="space-y-3 text-text-secondary">
               <li className="flex items-start gap-3">
@@ -83,7 +92,7 @@ export default function Changelog() {
 
           <div className="bg-bg-surface rounded-xl border border-border p-6 mb-6">
             <h3 className="text-2xl font-bold mb-4 text-blue-400 flex items-center gap-2">
-              <span>🔄</span> Modifiche
+              {t('changelog.sections.changes')}
             </h3>
             <ul className="space-y-3 text-text-secondary">
               <li className="flex items-start gap-3">
@@ -126,7 +135,7 @@ export default function Changelog() {
 
           <div className="bg-bg-surface rounded-xl border border-border p-6">
             <h3 className="text-2xl font-bold mb-4 text-purple-400 flex items-center gap-2">
-              <span>⚙️</span> Tecnico
+              {t('changelog.sections.tech')}
             </h3>
             <ul className="space-y-2 text-text-secondary text-sm">
               <li>• Nuovo componente: <code className="bg-bg-dark px-2 py-1 rounded">Layout.tsx</code></li>

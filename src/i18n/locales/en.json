@@ -326,6 +326,30 @@
       "free": "100% Free"
     }
   },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "News, tutorials, and insights about web development",
+    "readTime": "read",
+    "empty": {
+      "title": "No articles yet",
+      "message": "We're working on the first content. Come back soon!"
+    },
+    "newsletter": {
+      "title": "📬 Stay Updated",
+      "message": "Follow us on GitHub to receive notifications about new articles and project updates!",
+      "cta": "Follow us on GitHub"
+    }
+  },
+  "changelog": {
+    "title": "Changelog",
+    "subtitle": "All important changes to THEJORD.IT are documented here.",
+    "sections": {
+      "additions": "✨ Additions",
+      "changes": "🔄 Changes",
+      "fixes": "🐛 Fixes",
+      "tech": "🔧 Technical Improvements"
+    }
+  },
   "language": {
     "current": "English",
     "switch": "Switch language"
