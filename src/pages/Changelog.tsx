@@ -3,7 +3,13 @@ import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 
 export default function Changelog() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString)
+    const locale = i18n.language === 'it' ? 'it-IT' : 'en-US'
+    return date.toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })
+  }
 
   return (
     <Layout currentPage="about">
@@ -31,7 +37,7 @@ export default function Changelog() {
             <div className="bg-primary px-4 py-2 rounded-lg">
               <span className="text-white font-bold text-lg">v1.1.0</span>
             </div>
-            <span className="text-text-muted">12 Gennaio 2025</span>
+            <span className="text-text-muted">{formatDate('2025-01-12')}</span>
           </div>
 
           <div className="bg-bg-surface rounded-xl border border-border p-6 mb-6">
@@ -154,7 +160,7 @@ export default function Changelog() {
             <div className="bg-secondary px-4 py-2 rounded-lg">
               <span className="text-white font-bold text-lg">v1.0.0</span>
             </div>
-            <span className="text-text-muted">12 Gennaio 2025</span>
+            <span className="text-text-muted">{formatDate('2025-01-12')}</span>
             <span className="bg-green-900/30 text-green-400 px-3 py-1 rounded-full text-sm font-semibold">
               🚀 Initial Release
             </span>
