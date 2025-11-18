@@ -1,30 +1,31 @@
 import Layout from '../components/Layout'
+import { useTranslation } from 'react-i18next'
 
 export default function Privacy() {
+  const { t } = useTranslation()
+
   return (
     <Layout showFullNav={false}>
 
       <main className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold mb-8">
           <span className="bg-gradient-to-r from-primary-light to-secondary-light bg-clip-text text-transparent">
-            Privacy Policy
+            {t('privacy.title')}
           </span>
         </h1>
 
         <div className="prose prose-invert max-w-none space-y-6 text-text-secondary">
           <p className="text-sm text-text-muted">
-            Ultimo aggiornamento: {new Date().toLocaleDateString('it-IT')}
+            {t('privacy.lastUpdate')} {new Date().toLocaleDateString(t('language.current') === 'Italiano' ? 'it-IT' : 'en-US')}
           </p>
 
           <section>
-            <h2 className="text-2xl font-bold text-text-primary mb-4">1. Introduzione</h2>
+            <h2 className="text-2xl font-bold text-text-primary mb-4">{t('privacy.sections.intro.title')}</h2>
             <p>
-              Benvenuto su THEJORD.IT ("noi", "nostro" o "il sito"). Rispettiamo la tua privacy e ci impegniamo a proteggerla
-              attraverso la nostra conformità con questa politica.
+              {t('privacy.sections.intro.p1')}
             </p>
             <p>
-              Questa Privacy Policy descrive i tipi di informazioni che raccogliamo da te o che ci fornisci quando visiti
-              il sito thejord.it e le nostre pratiche per raccogliere, utilizzare, mantenere, proteggere e divulgare tali informazioni.
+              {t('privacy.sections.intro.p2')}
             </p>
           </section>
 
