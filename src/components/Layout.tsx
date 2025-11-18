@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ReactNode } from 'react';
+import Footer from './Footer';
 
 interface LayoutProps {
   children: ReactNode;
@@ -62,26 +63,7 @@ export default function Layout({ children, currentPage = 'tools', showFullNav = 
 
       {children}
 
-      <footer className="bg-bg-dark border-t border-border mt-16 py-8">
-        <div className="max-w-7xl mx-auto px-4 text-center text-text-muted">
-          <p className="mb-2">Made with ❤️ in Italy 🇮🇹</p>
-          <p className="text-sm">
-            <a href="https://github.com/thejord-it/thejord-tools" target="_blank" rel="noopener noreferrer" className="hover:text-primary-light transition-colors">
-              Open Source
-            </a>
-            {' • '}
-            <Link to="/about" className="hover:text-primary-light transition-colors">About</Link>
-            {' • '}
-            <Link to="/contact" className="hover:text-primary-light transition-colors">Contact</Link>
-            {' • '}
-            <Link to="/changelog" className="hover:text-primary-light transition-colors">Changelog</Link>
-            {' • '}
-            <a href="https://github.com/thejord-it/thejord-tools/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer" className="hover:text-primary-light transition-colors">
-              Security
-            </a>
-          </p>
-        </div>
-      </footer>
+      {showFullNav && <Footer />}
     </div>
   );
 }

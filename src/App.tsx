@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-do
 import CookieConsent from 'react-cookie-consent'
 import { initGA, trackPageView } from './lib/analytics'
 import { RoutePreloader } from './components/RoutePreloader'
+import Footer from './components/Footer'
 
 // Lazy load all page components for code splitting
 const JsonFormatter = lazy(() => import('./pages/JsonFormatter'))
@@ -140,6 +141,8 @@ function Home() {
           </Link>
         </div>
       </main>
+
+      <Footer />
     </div>
   )
 }
