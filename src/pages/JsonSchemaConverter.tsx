@@ -1,6 +1,5 @@
 import Layout from '../components/Layout'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import MonacoJsonEditor from '../components/MonacoJsonEditor'
 import { jsonToJsonSchema, validateJSON, type JsonSchemaOptions } from '../lib/schema-generator'
@@ -142,27 +141,6 @@ export default function JsonSchemaConverter() {
           })}
         </script>
       </Helmet>
-
-      <header className="bg-bg-dark border-b border-border">
-        <nav className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
-            <Link to="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-xl font-bold shadow-lg shadow-primary/40">
-                ⚡
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-primary-light to-secondary-light bg-clip-text text-transparent">
-                THE JORD
-              </span>
-            </Link>
-            <div className="flex gap-6">
-              <Link to="/" className="text-text-secondary hover:text-primary-light transition-colors">Tools</Link>
-              <Link to="/blog" className="text-text-secondary hover:text-primary-light transition-colors">Blog</Link>
-              <Link to="/about" className="text-text-secondary hover:text-primary-light transition-colors">About</Link>
-              <Link to="/contact" className="text-text-secondary hover:text-primary-light transition-colors">Contact</Link>
-            </div>
-          </div>
-        </nav>
-      </header>
 
       <main className="max-w-7xl mx-auto px-4 py-8">
         {/* Header */}
