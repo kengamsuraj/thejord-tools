@@ -1,3 +1,4 @@
+import Layout from '../components/Layout'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
@@ -93,7 +94,7 @@ export default function CronBuilder() {
   }
 
   return (
-    <div className="min-h-screen bg-bg-darkest">
+    <Layout>
       <Helmet>
         <title>Cron Expression Builder - Visual Cron Schedule Creator | THEJORD.IT</title>
         <meta name="description" content="Create and validate cron expressions with our visual builder. Pattern library, real-time validation, next 5 executions preview. Perfect for Linux crontab, GitHub Actions, Jenkins, Kubernetes CronJobs." />
@@ -455,21 +456,7 @@ export default function CronBuilder() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-bg-dark border-t border-border mt-16 py-8">
-        <div className="max-w-7xl mx-auto px-4 text-center text-text-muted">
-          <p className="mb-2">Made with ❤️ in Italy 🇮🇹</p>
-          <p className="text-sm">
-            <a href="https://github.com/thejord-it/thejord-tools" target="_blank" rel="noopener noreferrer" className="hover:text-primary-light transition-colors">
-              Open Source
-            </a>
-            {' • '}
-            <Link to="/about" className="hover:text-primary-light transition-colors">About</Link>
-            {' • '}
-            <Link to="/contact" className="hover:text-primary-light transition-colors">Contact</Link>
-          </p>
-        </div>
-      </footer>
-    </div>
+    </Layout>
   )
 }
 
