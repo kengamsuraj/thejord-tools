@@ -101,9 +101,16 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
+      - name: Extract SHA tag
+        id: extract-sha
+        run: |
+          SHA_TAG=$(echo "${{ steps.meta.outputs.tags }}" | grep 'sha-' | head -1)
+          echo "sha_tag=${SHA_TAG}" >> $GITHUB_OUTPUT
+          echo "Using image: ${SHA_TAG}"
+
       - name: Deploy to K3s (direct access via self-hosted runner)
         env:
-          IMAGE_FULL: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+          IMAGE_FULL: ${{ steps.extract-sha.outputs.sha_tag }}
         run: |
           # Prepare deployment with current image and timestamp
           sed -e "s|IMAGE_PLACEHOLDER|${IMAGE_FULL}|g" \
@@ -139,7 +146,7 @@ jobs:
         run: |
           echo "✅ Deployment completed successfully!"
           echo "🌐 Site: https://thejord.it"
-          echo "📦 Image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest"
+          echo "📦 Image: ${{ steps.extract-sha.outputs.sha_tag }}"
 
       - name: Ping sitemap to search engines
         run: |

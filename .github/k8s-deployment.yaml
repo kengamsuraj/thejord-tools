@@ -27,7 +27,7 @@ spec:
       containers:
       - name: thejord
         image: IMAGE_PLACEHOLDER
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
           name: http
